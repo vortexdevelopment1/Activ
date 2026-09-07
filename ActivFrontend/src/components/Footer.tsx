@@ -35,11 +35,11 @@ const COMMUNITY_LINKS = [
     }, []);
 
     const socialItems = [
-      { label: "Instagram", href: socialLinks.instagram, icon: InstagramIcon },
-      { label: "LinkedIn", href: socialLinks.linkedin, icon: LinkedInIcon },
-      { label: "Facebook", href: socialLinks.facebook, icon: FacebookIcon },
-      { label: "YouTube", href: socialLinks.youtube, icon: YouTubeIcon },
-      { label: "X", href: socialLinks.x, icon: XIcon },
+      { label: "Instagram", href: socialLinks.instagram, icon: "/footer/instagram.png" },
+      { label: "LinkedIn", href: socialLinks.linkedin, icon: "/footer/LinkedIn.png" },
+      { label: "Facebook", href: socialLinks.facebook, icon: "/footer/facebook.png" },
+      { label: "YouTube", href: socialLinks.youtube, icon: "/footer/youtube.png" },
+      { label: "X", href: socialLinks.x, icon: "/footer/twitter.png" },
     ];
     return (
       <footer className="border-t border-white/10 bg-[#0F0F0F] px-4 pb-8 pt-14 sm:px-6">
@@ -151,14 +151,18 @@ const COMMUNITY_LINKS = [
               © 2026 Activpulse Booking Pvt. Ltd. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
-              {socialItems.map(({ label, href, icon: Icon }) => (
+              {socialItems.map(({ label, href, icon }) => (
                 <a
                   key={label}
                   href={href}
                   aria-label={label}
                   className="text-white/70 transition-colors hover:text-white"
                 >
-                  <Icon />
+                  <img
+                    src={icon}
+                    alt=""
+                    className="h-[18px] w-[18px] object-contain"
+                  />
                 </a>
               ))}
             </div>
@@ -194,52 +198,3 @@ const COMMUNITY_LINKS = [
     );
   }
   
-  function InstagramIcon() {
-    return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1.5" y="1.5" width="15" height="15" rx="4" stroke="currentColor" strokeWidth="1.3" />
-        <circle cx="9" cy="9" r="3.4" stroke="currentColor" strokeWidth="1.3" />
-        <circle cx="13" cy="5" r="0.9" fill="currentColor" />
-      </svg>
-    );
-  }
-  
-  function LinkedInIcon() {
-    return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1.5" y="1.5" width="15" height="15" rx="2.5" stroke="currentColor" strokeWidth="1.3" />
-        <path d="M6 7.5v5.2M6 5.4v.1M9.2 12.7V9.6c0-1.1.7-1.9 1.7-1.9 1 0 1.6.7 1.6 1.9v3.1" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
-      </svg>
-    );
-  }
-  
-  function FacebookIcon() {
-    return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="9" cy="9" r="7.5" stroke="currentColor" strokeWidth="1.3" />
-        <path d="M10.6 6.4H9.7c-.5 0-.9.4-.9.9v1h1.8l-.3 1.7H8.8v4.2H7v-4.2H5.9V8.3H7v-1c0-1.2 1-2.2 2.2-2.2h1.4v1.3Z" fill="currentColor" />
-      </svg>
-    );
-  }
-  
-  function YouTubeIcon() {
-    return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1.5" y="4" width="15" height="10" rx="3" stroke="currentColor" strokeWidth="1.3" />
-        <path d="M7.6 6.9 11 9l-3.4 2.1V6.9Z" fill="currentColor" />
-      </svg>
-    );
-  }
-  
-  function XIcon() {
-    return (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M3.5 3.5 8.1 9.2 3.4 14.5H5l3.2-3.6 2.7 3.6h3.1L9.2 8.5l4.4-5H12l-3 3.4-2.5-3.4H3.5Z"
-          stroke="currentColor"
-          strokeWidth="0.7"
-          fill="currentColor"
-        />
-      </svg>
-    );
-  }

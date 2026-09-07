@@ -151,7 +151,7 @@ export default function Home({ onNavigate }: HomeProps) {
           </h1>
 
           {/* Body copy */}
-          <p className="mt-5 max-w-md text-base leading-relaxed text-white/70 sm:text-lg">
+          <p className="mt-5 max-w-md text-base leading-relaxed text-#E6ECD7 sm:text-lg">
             Live availability across turfs, courts, gyms, studios, and wellness
             venues near you. Find the right session, book directly, and pay
             securely. No calling, no WhatsApp groups, no second-guessing.
@@ -206,9 +206,9 @@ export default function Home({ onNavigate }: HomeProps) {
               </span>
             </div>
             <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.08]">
-              Making Active Living <span className="text-[#c8f31d]">Accessible</span> for Everyone
+              Making Active <br /> Living <span className="text-[#c8f31d]">Accessible</span> for Everyone
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg">
+            <p className="mt-6 text-base text-#E6ECD7 leading-relaxed sm:text-lg">
               The hardest part of being active isn't the activity. It's everything before it. Finding a place worth going to, checking if it's open, calling, messaging, second-guessing, sometimes giving up. ACTIV cuts the whole pre-game out. You see what's free, you book, you show up.
             </p>
           </AnimateOnScroll>
@@ -301,8 +301,8 @@ export default function Home({ onNavigate }: HomeProps) {
                 <SearchListIcon />
               </div>
               <div>
-                <h3 className="text-base font-semibold text-white">Find what's good</h3>
-                <p className="mt-1 text-xs text-white/50">Badminton, pickleball, gym, and many more, — find it instantly.</p>
+                <h3 className="text-[15px] font-semibold text-white">Find what's good</h3>
+                <p className="mt-1 text-[13px] text-white/50">Badminton, pickleball, gym, and many more, — find it instantly.</p>
               </div>
             </div>
 
@@ -311,7 +311,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 <CalendarCheckIcon />
               </div>
               <div>
-                <h3 className="text-base font-semibold text-white">Book in seconds</h3>
+                <h3 className="text-[15px] font-semibold text-white">Book in seconds</h3>
               </div>
             </div>
 
@@ -320,7 +320,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 <RunIcon />
               </div>
               <div>
-                <h3 className="text-base font-semibold text-white">Try anything</h3>
+                <h3 className="text-[15px] font-semibold text-white">Try anything</h3>
               </div>
             </div>
           </AnimateOnScroll>
@@ -346,7 +346,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.08]">
               Empty courts cost the same as <span className="text-[#c8f31d]">Full Ones</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg">
+            <p className="mt-6 text-base text-#E6ECD7 leading-relaxed sm:text-lg">
               ACTIV is how venues across India fill them. We put your slots in front of every player searching in your area, take the booking admin off your plate, and give you data on what's working. No setup fees. No long contracts. No four-week sales call before anything starts working.
             </p>
 
@@ -372,8 +372,8 @@ export default function Home({ onNavigate }: HomeProps) {
                 <GlobeIcon />
               </div>
               <div>
-                <h3 className="text-base font-semibold text-white">Get Discovered Instantly</h3>
-                <p className="mt-1 text-xs text-white/50">Your venue appears in search the moment a player decides to play. More visibility, more bookings, none of it dependent on the algorithm liking you that week.</p>
+                <h3 className="text-[15px] font-semibold text-white">Get Discovered Instantly</h3>
+                <p className="mt-1 text-[13px] text-white/50">Your venue appears in search the moment a player decides to play. More visibility, more bookings, none of it dependent on the algorithm liking you that week.</p>
               </div>
             </div>
 
@@ -382,7 +382,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 <RotateIcon />
               </div>
               <div>
-                <h3 className="text-base font-semibold text-white">Automate Your Operations</h3>
+                <h3 className="text-[15px] font-semibold text-white">Automate Your Operations</h3>
               </div>
             </div>
 
@@ -391,7 +391,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 <HeartIcon />
               </div>
               <div>
-                <h3 className="text-base font-semibold text-white">Build Community Loyalty</h3>
+                <h3 className="text-[15px] font-semibold text-white">Build Community Loyalty</h3>
               </div>
             </div>
           </AnimateOnScroll>
@@ -428,7 +428,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.08]">
             Built with the people <br /> running the <span className="text-[#c8f31d]">Floor.</span>
           </h2>
-          <p className="mt-4 text-base text-white/60 max-w-xl mx-auto">
+          <p className="mt-4 text-base text-#E6ECD7 max-w-xl mx-auto">
             Every feature on ACTIV started as a frustration from a venue owner. Their feedback decides what we ship next, and what we choose not to ship at all.
           </p>
         </div>

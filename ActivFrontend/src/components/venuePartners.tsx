@@ -132,7 +132,7 @@ export default function VenuePartnersv() {
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-14 pt-40 sm:px-6 sm:pb-20">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3.5 py-1.5 backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-[#c8f31d]" />
-            <span className="text-xs font-medium text-white/90">
+            <span className="text-xs font-medium text-[#BBD864]">
               ACTIV For Venue Partners – Pan India Coverage
             </span>
           </div>
@@ -278,7 +278,7 @@ export default function VenuePartnersv() {
 
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
             <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
-            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#111] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
+            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
               <span className="-rotate-45 text-sm font-bold text-[#c8f31d]">01</span>
             </div>
             <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
@@ -323,7 +323,7 @@ export default function VenuePartnersv() {
 
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
             <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
-            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#111] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
+            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
               <span className="-rotate-45 text-sm font-bold text-[#c8f31d]">02</span>
             </div>
             <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
@@ -369,7 +369,7 @@ export default function VenuePartnersv() {
 
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
             <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
-            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#111] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
+            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
               <span className="-rotate-45 text-sm font-bold text-[#c8f31d]">03</span>
             </div>
             <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
@@ -414,7 +414,7 @@ export default function VenuePartnersv() {
 
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
             <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
-            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#111] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
+            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
               <span className="-rotate-45 text-sm font-bold text-[#c8f31d]">04</span>
             </div>
             <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
