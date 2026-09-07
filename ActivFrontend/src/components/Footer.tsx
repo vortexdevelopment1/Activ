@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { API } from "../config/api";
 
 const COMMUNITY_LINKS = [
     { label: "Merch", emoji: "🔥", href: "#merch" },
@@ -27,7 +28,7 @@ const COMMUNITY_LINKS = [
     const [socialLinks, setSocialLinks] = useState(DEFAULT_SOCIAL_LINKS);
 
     useEffect(() => {
-      fetch("http://localhost:5000/api/social-links")
+      fetch(`${API}/social-links`)
         .then((response) => response.ok ? response.json() : Promise.reject())
         .then(setSocialLinks)
         .catch(() => undefined);

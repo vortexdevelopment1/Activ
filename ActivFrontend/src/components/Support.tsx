@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { API } from "../config/api";
 
 interface FaqItem {
   question: string;
@@ -145,7 +146,7 @@ export default function Support() {
     setSubmitState("sending");
 
     try {
-      const response = await fetch("http://localhost:5000/api/contacts", {
+      const response = await fetch(`${API}/contacts`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

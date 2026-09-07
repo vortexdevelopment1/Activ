@@ -1,10 +1,10 @@
 import { useEffect, useState, type FormEvent } from "react";
+import { API } from "../config/api";
 
 type Tab = "messages" | "settings" | "profile";
 type Contact = { id: string; fullName: string; email: string; phone: string; message: string; createdAt: string };
 type SocialLinks = Record<"instagram" | "linkedin" | "facebook" | "youtube" | "x", string>;
 
-const API = "http://localhost:5000/api";
 const emptyLinks: SocialLinks = { instagram: "#", linkedin: "#", facebook: "#", youtube: "#", x: "#" };
 
 export default function Admin({ onNavigate }: { onNavigate: (view: string) => void }) {

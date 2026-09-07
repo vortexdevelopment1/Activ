@@ -10,7 +10,7 @@ interface LoginProps {
 }
 
 export default function Login({ onSubmit, onNavigateHome }: LoginProps) {
-  const [role, setRole] = useState<Role>("player");
+  const [role] = useState<Role>("player");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
