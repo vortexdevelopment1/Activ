@@ -117,7 +117,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <video
             ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover"
-            src="/UserVideo.mp4"
+            src="/Home.mp4"
             autoPlay
             muted
             loop

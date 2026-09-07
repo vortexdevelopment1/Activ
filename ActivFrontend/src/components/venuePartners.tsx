@@ -114,7 +114,7 @@ export default function VenuePartnersv() {
           <video
             ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover"
-            src="/UserVideo.mp4"
+            src="/Venuepartner.mp4"
             autoPlay
             muted
             loop
