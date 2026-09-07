@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "id": "82e36631-c9ad-4c80-b25c-680bd98da21a",
+      "fullName": "Akshit Nannaware",
+      "email": "akshitnannaware@gmail.com",
+      "phone": "7470351182",
+      "message": "werfgvjiole.",
+      "createdAt": "2026-09-07T06:52:56.098Z"
+    }
+  ],
+  "socialLinks": {
+    "instagram": "#",
+    "linkedin": "#",
+    "facebook": "#",
+    "youtube": "#",
+    "x": "#"
+  }
+}
