@@ -53,7 +53,7 @@ function AnimateOnScroll({
 const venuePartnerImageUrl = (fileName: string) =>
   `/venuepartners/${encodeURIComponent(fileName)}`;
 
-export default function VenuePartnersv(){
+export default function VenuePartnersv() {
   // Video should be fully visible as soon as it can actually play, with a
   // short fallback timer so the poster/black background never lingers past ~1s.
   const [videoVisible, setVideoVisible] = useState(false);
@@ -108,9 +108,8 @@ export default function VenuePartnersv(){
       <section className="relative flex min-h-[640px] w-full items-end overflow-hidden sm:min-h-[730px]">
         {/* Background video with overlay */}
         <div
-          className={`absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-700 ease-out ${
-            videoVisible ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-700 ease-out ${videoVisible ? "opacity-100" : "opacity-0"
+            }`}
         >
           <video
             ref={videoRef}
@@ -442,40 +441,41 @@ export default function VenuePartnersv(){
       </section>
 
       {/* 7. Bottom Call to Action Banner */}
-      <section className="scroll-section relative flex min-h-[350px] w-full items-center justify-center overflow-hidden bg-[#0F0F0F] text-center border-t border-white/5 px-4 sm:min-h-[600px]">
+      <section className="scroll-section relative flex min-h-[400px] w-full items-center justify-center overflow-hidden bg-[#0F0F0F] text-center border-t border-white/5 px-4 py-16 sm:min-h-[600px] sm:py-24">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-100"
           style={{ backgroundImage: "url('/4689587144a8bdacab6d7838d59f191c1ca0cf3e.png')" }}
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-black/15" />
+        <div className="absolute inset-0 bg-black/40 sm:bg-black/15" />
 
-        <div className="relative z-10 mx-auto flex max-w-2xl flex-col items-center py-12 sm:py-14">
-          <h2 className="text-7xl font-extrabold leading-[0.95] tracking-tight text-white sm:text-bold">
+        <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center px-4">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-[1.1] tracking-tight text-white">
             Ready to get
             <span className="text-[#c8f31d] pl-2">ACTIV?</span>
           </h2>
-          <div className="mt-6 flex w-full max-w-[840px] items-center gap-3 sm:gap-4">
-            <span className="h-px w-[500px] flex-1 bg-white" />
-            <p className="shrink-0 text-5xl font-medium text-white/90 sm:text-sm">
+
+          <div className="mt-6 flex w-full items-center justify-center gap-3 sm:gap-4">
+            <span className="h-px hidden sm:block flex-1 bg-white/40" />
+            <p className="text-sm sm:text-base md:text-lg font-medium text-white/90 px-2 text-center">
               because getting active should be easy
             </p>
-            <span className="h-px flex-1 bg-white" />
+            <span className="h-px hidden sm:block flex-1 bg-white/40" />
           </div>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-2.5 sm:gap-3">
+          <div className="mt-10 flex flex-col sm:flex-row w-full max-w-md sm:max-w-none justify-center gap-3 sm:gap-4">
             <a
               href="#"
-              className="inline-flex min-w-[200px] h-[50px] items-center justify-center gap-2 rounded-sm bg-white px-3.5 py-2 text-1xs font-semibold text-black transition-colors hover:bg-[#c8f31d]"
+              className="inline-flex w-full sm:w-auto min-w-[200px] h-[50px] items-center justify-center gap-2 rounded-xl sm:rounded-sm bg-white px-5 py-2 text-sm font-semibold text-black transition-colors hover:bg-[#c8f31d]"
             >
-              <img src="/public/venuePartners/apple_svgrepo.com.png" alt="" />
+              <AppleIcon />
               Download for iOS
             </a>
             <a
               href="#"
-              className="inline-flex min-w-[200px] h-[50px] items-center justify-center gap-2 rounded-sm bg-white px-3.5 py-2 text-1xs font-semibold text-black transition-colors hover:bg-[#c8f31d]"
+              className="inline-flex w-full sm:w-auto min-w-[200px] h-[50px] items-center justify-center gap-2 rounded-xl sm:rounded-sm bg-white px-5 py-2 text-sm font-semibold text-black transition-colors hover:bg-[#c8f31d]"
             >
-              <img src="/public/venuePartners/android_svgrepo.com.png" alt="" />
+              <GooglePlayIcon />
               Download for Android
             </a>
           </div>
