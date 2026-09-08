@@ -279,7 +279,7 @@ export default function VenuePartnersv() {
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
             <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
             <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
-              <span className="-rotate-45 text-sm font-bold text-[#c8f31d]">01</span>
+              <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">01</span>
             </div>
             <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
           </div>
@@ -324,7 +324,7 @@ export default function VenuePartnersv() {
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
             <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
             <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
-              <span className="-rotate-45 text-sm font-bold text-[#c8f31d]">02</span>
+              <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">02</span>
             </div>
             <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
           </div>
@@ -370,7 +370,7 @@ export default function VenuePartnersv() {
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
             <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
             <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
-              <span className="-rotate-45 text-sm font-bold text-[#c8f31d]">03</span>
+              <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">03</span>
             </div>
             <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
           </div>
@@ -415,7 +415,7 @@ export default function VenuePartnersv() {
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
             <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
             <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
-              <span className="-rotate-45 text-sm font-bold text-[#c8f31d]">04</span>
+              <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">04</span>
             </div>
             <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
           </div>
