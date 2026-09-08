@@ -530,14 +530,14 @@ export default function Players() {
               href="#"
               className="inline-flex w-full sm:w-auto min-w-[200px] h-[50px] items-center justify-center gap-2 rounded-xl sm:rounded-sm bg-white px-5 py-2 text-sm font-semibold text-black transition-colors hover:bg-[#c8f31d]"
             >
-              <AppleIcon />
+              <img src="/players/apple_svgrepo.com.png" alt="Apple logo" className="w-5 h-5" />
               Download for iOS
             </a>
             <a
               href="#"
               className="inline-flex w-full sm:w-auto min-w-[200px] h-[50px] items-center justify-center gap-2 rounded-xl sm:rounded-sm bg-white px-5 py-2 text-sm font-semibold text-black transition-colors hover:bg-[#c8f31d]"
             >
-              <GooglePlayIcon />
+              <img src="/players/android_svgrepo.com.png" alt="Google Play logo" className="w-5 h-5" />
               Download for Android
             </a>
           </div>
