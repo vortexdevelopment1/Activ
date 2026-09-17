@@ -195,7 +195,7 @@ export default function VenuePartnersv() {
         </AnimateOnScroll>
 
         <AnimateOnScroll direction="right" className="mx-auto max-w-6xl mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="relative flex flex-col justify-between rounded-2xl border border-white/15 bg-black/75 p-6 shadow-[0_16px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm overflow-hidden">
+          <div className="relative flex flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] overflow-hidden">
             <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
               <EyeIcon />
             </div>
@@ -210,7 +210,7 @@ export default function VenuePartnersv() {
             </div>
           </div>
 
-          <div className="relative flex flex-col justify-between rounded-2xl border border-white/15 bg-black/75 p-6 shadow-[0_16px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm overflow-hidden">
+          <div className="relative flex flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] overflow-hidden">
             <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
               <CalendarIcon />
             </div>
@@ -225,7 +225,7 @@ export default function VenuePartnersv() {
             </div>
           </div>
 
-          <div className="relative flex flex-col justify-between rounded-2xl border border-white/15 bg-black/75 p-6 shadow-[0_16px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm overflow-hidden">
+          <div className="relative flex flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] overflow-hidden">
             <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
               <CogIcon />
             </div>
@@ -240,7 +240,7 @@ export default function VenuePartnersv() {
             </div>
           </div>
 
-          <div className="relative flex flex-col justify-between rounded-2xl border border-white/15 bg-black/75 p-6 shadow-[0_16px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm overflow-hidden">
+          <div className="relative flex flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] overflow-hidden">
             <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
               <LightbulbIcon />
             </div>

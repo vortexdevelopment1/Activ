@@ -110,9 +110,8 @@ export default function Home({ onNavigate }: HomeProps) {
       >
         {/* Background video with overlay (FIXED: real <video> tag, correct /public path, no iframe zoom hack) */}
         <div
-          className={`absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-700 ease-out ${
-            videoVisible ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-700 ease-out ${videoVisible ? "opacity-100" : "opacity-0"
+            }`}
         >
           <video
             ref={videoRef}
@@ -214,7 +213,7 @@ export default function Home({ onNavigate }: HomeProps) {
           </AnimateOnScroll>
 
           <AnimateOnScroll direction="right" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="rounded-2xl border border-white/15 bg-black/75 p-6 backdrop-blur-sm">
+            <div className="rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
                 <EyeIcon />
               </div>
@@ -224,30 +223,24 @@ export default function Home({ onNavigate }: HomeProps) {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/15 bg-black/75 p-6 backdrop-blur-sm">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <LightningIcon />
-              </div>
+            <div className="rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+              <img src="/Light.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
               <h3 className="text-lg font-semibold text-white">Instant Bookings</h3>
               <p className="mt-2 text-sm text-white/60 leading-relaxed">
                 Live availability, direct booking, and secure payments. The booking lands in your dashboard before the player finishes tying their laces.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/15 bg-black/75 p-6 backdrop-blur-sm">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <ChartIcon />
-              </div>
+            <div className="rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+              <img src="/Growth.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
               <h3 className="text-lg font-semibold text-white">Growth Insights</h3>
               <p className="mt-2 text-sm text-white/60 leading-relaxed">
                 Revenue, occupancy and peak-hour patterns, updated through the day. Pricing and scheduling stop being guesses.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/15 bg-black/75 p-6 backdrop-blur-sm">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <ShieldCheckIcon />
-              </div>
+            <div className="rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+              <img src="/Check.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
               <h3 className="text-lg font-semibold text-white">Verified Quality</h3>
               <p className="mt-2 text-sm text-white/60 leading-relaxed">
                 Every venue on ACTIV is reviewed by our team before it goes live, so players know what they're walking into.
@@ -259,10 +252,11 @@ export default function Home({ onNavigate }: HomeProps) {
 
       {/* Section 2: For Players */}
       <section id="players" className="scroll-section relative bg-[#0F0F0F] px-4 py-20 sm:px-6 sm:py-28 overflow-hidden border-t border-white/5">
-        {/* Decorative background: full-width triangle-wave zigzag + top-right mesh accent (matches Figma) */}
-        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          <TriangleWave className="opacity-90" />
-          <TriangleLines className="-top-6 right-0 h-72 w-72 opacity-70" />
+        {/* Decorative background (matches Figma) */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none opacity-100"
+          style={{ backgroundImage: "url('/Forplayer.png')", backgroundSize: "100% 100%", backgroundPosition: "center" }}
+        >
         </div>
 
         <div className="relative z-10 mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -296,29 +290,22 @@ export default function Home({ onNavigate }: HomeProps) {
           </AnimateOnScroll>
 
           <AnimateOnScroll direction="right" className="flex flex-col gap-4">
-            <div className="flex items-center gap-4 rounded-2xl border border-white/15 bg-black/75 p-5 backdrop-blur-sm">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <SearchListIcon />
-              </div>
+            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+              <img src="/Search.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
               <div>
                 <h3 className="text-[15px] font-semibold text-white">Find what's good</h3>
-                <p className="mt-1 text-[13px] text-white/50">Badminton, pickleball, gym, and many more, — find it instantly.</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-white/15 bg-black/75 p-5 backdrop-blur-sm">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <CalendarCheckIcon />
-              </div>
+            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+              <img src="/Calender.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
               <div>
                 <h3 className="text-[15px] font-semibold text-white">Book in seconds</h3>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-white/15 bg-black/75 p-5 backdrop-blur-sm">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <RunIcon />
-              </div>
+            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+              <img src="/Running.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
               <div>
                 <h3 className="text-[15px] font-semibold text-white">Try anything</h3>
               </div>
@@ -328,11 +315,12 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* Section 3: For Venue Partners */}
-      <section id="venue-partners" className="scroll-section relative bg-[#0F0F0F] px-4 py-20 sm:px-6 sm:py-28 overflow-hidden border-t border-white/5">
-        {/* Decorative background: full-width triangle-wave zigzag + top-right mesh accent + chevron (matches Figma) */}
-        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          <TriangleWave className="opacity-90" />
-          <TriangleLines className="-top-6 right-0 h-72 w-72 opacity-70" />
+      <section id="venue-partners" className="scroll-section relative bg-[#0F0F0F] px-4 py-20 sm:px-6 sm:py-28 overflow-hidden">
+        {/* Decorative background: chevron (matches Figma) */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none opacity-100"
+          style={{ backgroundImage: "url('/Frame 1707482753(1).png')", backgroundSize: "99% 95%", backgroundPosition: "center" }}
+        >
           <ChevronBracket className="top-[110px] right-[190px] h-20 w-12 opacity-70" />
         </div>
 
@@ -367,31 +355,27 @@ export default function Home({ onNavigate }: HomeProps) {
           </AnimateOnScroll>
 
           <AnimateOnScroll direction="right" className="flex flex-col gap-4">
-            <div className="flex items-center gap-4 rounded-2xl border border-white/15 bg-black/75 p-5 backdrop-blur-sm">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#c8f31d]/60 bg-black/75 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <GlobeIcon />
-              </div>
+            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+              <img src="/Discover.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
               <div>
-                <h3 className="text-[15px] font-semibold text-white">Get Discovered Instantly</h3>
-                <p className="mt-1 text-[13px] text-white/50">Your venue appears in search the moment a player decides to play. More visibility, more bookings, none of it dependent on the algorithm liking you that week.</p>
+                <h3 className="text-[15px] font-semibold text-white">Discover Your Next Favorite Spot</h3>
+                <p className="mt-1 text-[13px] text-white/50">Your venue appears in search results for thousands of people looking for sports & wellness experiences near them. More visibility means more bookings — without spending on ads.</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-white/15 bg-black/75 p-5 backdrop-blur-sm">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#c8f31d]/60 bg-black/75 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <RotateIcon />
-              </div>
+            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+              <img src="/Clock.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
               <div>
                 <h3 className="text-[15px] font-semibold text-white">Automate Your Operations</h3>
+                <p className="mt-1 text-[13px] text-white/50">Accept bookings 24/7, manage time slots, handle cancellations, and track payments — all from one app. No more phone calls, WhatsApp chaos, or manual registers.</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-white/15 bg-black/75 p-5 backdrop-blur-sm">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#c8f31d]/60 bg-black/75 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <HeartIcon />
-              </div>
+            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+              <img src="/Heart.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
               <div>
                 <h3 className="text-[15px] font-semibold text-white">Build Community Loyalty</h3>
+                <p className="mt-1 text-[13px] text-white/50">Deliver consistent quality experiences backed by user reviews and ratings. Happy members return, recommend, and bring their circles. That's sustainable growth.</p>
               </div>
             </div>
           </AnimateOnScroll>
@@ -399,7 +383,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* Section 4: Why Trust Activ (Testimonials) - With AbstractDesign.png Background Image */}
-      <section className="scroll-section relative bg-[#0F0F0F] px-4 py-20 sm:px-6 sm:py-28 overflow-hidden border-t border-white/5">
+      <section className="scroll-section relative bg-[#0F0F0F] px-4 py-20 sm:px-6 sm:py-28 overflow-hidden">
         {/* AbstractDesign.png Background Image Container */}
         <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[600px] h-[400px] pointer-events-none opacity-80 z-0 overflow-hidden flex justify-center">
           <img
@@ -436,7 +420,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="relative z-10 mx-auto max-w-6xl mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           <AnimateOnScroll
             direction="left"
-            className="flex flex-col justify-between rounded-2xl border border-white/15 bg-black/75 p-8 backdrop-blur-sm"
+            className="flex flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-8 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]"
           >
             <p className="text-sm text-white/80 leading-relaxed">
               Before ACTIV, our bookings lived in three places. A WhatsApp group, a notebook at the front desk, and someone's memory. Cleaning that up gave us back hours every week, and the visibility brought in players we'd never have reached on our own.
@@ -447,7 +431,7 @@ export default function Home({ onNavigate }: HomeProps) {
             </div>
           </AnimateOnScroll>
 
-          <div className="flex flex-col justify-between rounded-2xl border border-white/15 bg-black/75 p-8 backdrop-blur-sm">
+          <div className="flex flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-8 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
             <p className="text-sm text-white/80 leading-relaxed">
               Most of my day used to disappear into replying to enquiries about timings and slot availability. The app handles all of it now, which means I'm back on the mat where I should be, and the studio runs itself in the background.
             </p>
@@ -459,7 +443,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
           <AnimateOnScroll
             direction="right"
-            className="flex flex-col justify-between rounded-2xl border border-white/15 bg-black/75 p-8 backdrop-blur-sm"
+            className="flex flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-8 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]"
           >
             <p className="text-sm text-white/80 leading-relaxed">
               The dashboard alone has changed how we run the place. I can see peak hours, what's selling, what's empty, and where the energy of the gym goes. We stopped guessing, and revenue followed shortly after.
@@ -475,33 +459,7 @@ export default function Home({ onNavigate }: HomeProps) {
   );
 }
 
-// Full-width triangle-wave / zigzag mesh (the dominant repeating X pattern
-// spanning the full section width, matching the Figma background exactly)
-function TriangleWave({ className = "" }: { className?: string }) {
-  const P = 311; // measured horizontal period of one zigzag cell
-  const H = 547; // measured vertical span (top apex to bottom apex)
-  const N = 5; // number of cells (wide enough to cover large screens)
-  const lines = [];
-  for (let i = 0; i < N; i++) {
-    const x1 = i * P;
-    const x2 = (i + 1) * P;
-    lines.push(
-      <line key={`d-${i}`} x1={x1} y1={0} x2={x2} y2={H} stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />,
-      <line key={`u-${i}`} x1={x1} y1={H} x2={x2} y2={0} stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-    );
-  }
-  return (
-    <svg
-      className={`absolute inset-0 h-full w-full ${className}`}
-      viewBox={`0 0 ${N * P} ${H}`}
-      preserveAspectRatio="none"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {lines}
-    </svg>
-  );
-}
+
 
 // Decorative background elements (Figma-matched)
 function GridBackground() {
@@ -537,60 +495,7 @@ function DiagonalHatch({ className = "" }: { className?: string }) {
   );
 }
 
-// Low-poly triangulated mesh (Delaunay network), matching the continuous
-// triangle line-art pattern used in the "For Players" / "For Venue Partners" backgrounds
-function TriangleLines({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      className={`absolute ${className}`}
-      viewBox="0 0 500 500"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <line x1="330" y1="10" x2="420" y2="40" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="330" y1="10" x2="340" y2="150" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="330" y1="10" x2="250" y2="160" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="330" y1="10" x2="150" y2="90" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="420" y1="40" x2="480" y2="140" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="420" y1="40" x2="340" y2="150" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="480" y1="140" x2="500" y2="260" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="480" y1="140" x2="340" y2="150" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="480" y1="140" x2="390" y2="250" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="500" y1="260" x2="470" y2="380" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="500" y1="260" x2="390" y2="250" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="500" y1="260" x2="480" y2="470" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="470" y1="380" x2="420" y2="460" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="470" y1="380" x2="300" y2="430" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="470" y1="380" x2="390" y2="250" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="470" y1="380" x2="480" y2="470" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="420" y1="460" x2="300" y2="430" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="420" y1="460" x2="60" y2="430" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="420" y1="460" x2="480" y2="470" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="300" y1="430" x2="230" y2="340" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="300" y1="430" x2="150" y2="420" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="300" y1="430" x2="60" y2="430" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="300" y1="430" x2="390" y2="250" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="230" y1="340" x2="260" y2="220" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="230" y1="340" x2="150" y2="420" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="230" y1="340" x2="180" y2="250" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="230" y1="340" x2="390" y2="250" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="260" y1="220" x2="340" y2="150" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="260" y1="220" x2="180" y2="250" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="260" y1="220" x2="250" y2="160" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="260" y1="220" x2="390" y2="250" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="340" y1="150" x2="250" y2="160" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="340" y1="150" x2="390" y2="250" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="150" y1="420" x2="60" y2="430" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="150" y1="420" x2="180" y2="250" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="60" y1="430" x2="180" y2="250" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="60" y1="430" x2="150" y2="90" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="60" y1="430" x2="480" y2="470" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="180" y1="250" x2="250" y2="160" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="180" y1="250" x2="150" y2="90" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-      <line x1="250" y1="160" x2="150" y2="90" stroke="#ffffff" strokeOpacity="0.08" strokeWidth="1" />
-    </svg>
-  );
-}
+
 
 function ChevronBracket({ className = "" }: { className?: string }) {
   return (
@@ -651,92 +556,5 @@ function VenueIcon() {
 }
 
 function EyeIcon() {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" />
-      <circle cx="12" cy="12" r="3" />
-    </svg>
-  );
-}
-
-function LightningIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>
-  );
-}
-
-function ChartIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg>
-  );
-}
-
-function ShieldCheckIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
-  );
-}
-
-function SearchListIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="21" y1="6" x2="3" y2="6" />
-      <line x1="15" y1="12" x2="3" y2="12" />
-      <line x1="11" y1="18" x2="3" y2="18" />
-      <circle cx="18" cy="15" r="3" />
-      <line x1="22" y1="19" x2="20.2" y2="17.2" />
-    </svg>
-  );
-}
-
-function CalendarCheckIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-      <line x1="16" y1="2" x2="16" y2="6" />
-      <line x1="8" y1="2" x2="8" y2="6" />
-      <line x1="3" y1="10" x2="21" y2="10" />
-      <path d="m9 16 2 2 4-4" />
-    </svg>
-  );
-}
-
-function RunIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="18.5" cy="5.5" r="1.5" />
-      <path d="M11.5 9.5 8 13l-4-1" />
-      <path d="m14 13-1.5 4.5L16 21" />
-      <path d="m7 19 2-4 3-1 3-3 2-3" />
-    </svg>
-  );
-}
-
-function GlobeIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10" />
-      <line x1="2" y1="12" x2="22" y2="12" />
-      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-    </svg>
-  );
-}
-
-function RotateIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
-      <path d="M3 3v5h5" />
-      <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
-      <path d="M16 21h5v-5" />
-    </svg>
-  );
-}
-
-function HeartIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-    </svg>
-  );
+  return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>;
 }

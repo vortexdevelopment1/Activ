@@ -190,7 +190,7 @@ export default function Players() {
         </AnimateOnScroll>
 
         <AnimateOnScroll direction="right" className="relative mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="relative flex min-h-[250px] flex-col justify-between rounded-2xl border border-white/15 bg-black/75 p-5 shadow-[0_16px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm">
+          <div className="relative flex min-h-[250px] flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
             <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
               <EyeIcon />
             </div>
@@ -205,7 +205,7 @@ export default function Players() {
             </div>
           </div>
 
-          <div className="relative flex min-h-[210px] flex-col justify-between rounded-2xl border border-white/15 bg-black/75 p-5 shadow-[0_16px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm">
+          <div className="relative flex min-h-[210px] flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
             <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
               <CalendarIcon />
             </div>
@@ -220,7 +220,7 @@ export default function Players() {
             </div>
           </div>
 
-          <div className="relative flex min-h-[210px] flex-col justify-between rounded-2xl border border-white/15 bg-black/75 p-5 shadow-[0_16px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm">
+          <div className="relative flex min-h-[210px] flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
             <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
               <CogIcon />
             </div>
@@ -235,7 +235,7 @@ export default function Players() {
             </div>
           </div>
 
-          <div className="relative flex min-h-[210px] flex-col justify-between rounded-2xl border border-white/15 bg-black/75 p-5 shadow-[0_16px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm">
+          <div className="relative flex min-h-[210px] flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
             <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
               <LightbulbIcon />
             </div>
@@ -462,40 +462,32 @@ export default function Players() {
           </AnimateOnScroll>
 
           <AnimateOnScroll direction="right" className="flex flex-col gap-4">
-            <div className="flex items-center gap-4 rounded-2xl border border-white/15 bg-black/75 p-5 shadow-[0_16px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#c8f31d]/60 bg-black/75 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <SearchLinesIcon />
-              </div>
+            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+              <img src="/Search.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
               <div>
                 <h3 className="text-base font-semibold text-white">The Saturday regular</h3>
                 <p className="mt-1 text-xs text-white/50">Same studio, same friend group, same 7am start. ACTIV remembers your favourites and books them in three taps.</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-white/15 bg-black/75 p-5 shadow-[0_16px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#c8f31d]/60 bg-black/75 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <CalendarBoxCheckIcon />
-              </div>
+            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+              <img src="/Calender.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
               <div>
-                <h3 className="text-base font-semibold text-white">The first-time anything</h3>
+                <h3 className="text-[15px] font-semibold text-white">The first-time anything</h3>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-white/15 bg-black/75 p-5 shadow-[0_16px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#c8f31d]/60 bg-black/75 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <RunningPersonIcon />
-              </div>
+            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+              <img src="/Running.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
               <div>
-                <h3 className="text-base font-semibold text-white">The comeback</h3>
+                <h3 className="text-[15px] font-semibold text-white">The Comeback</h3>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-white/15 bg-black/75 p-5 shadow-[0_16px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#c8f31d]/60 bg-black/75 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <RunningPersonIcon />
-              </div>
+            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+              <img src="/Running.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
               <div>
-                <h3 className="text-base font-semibold text-white">The friend group plan</h3>
+                <h3 className="text-[15px] font-semibold text-white">The friend group plan</h3>
               </div>
             </div>
           </AnimateOnScroll>
@@ -603,38 +595,4 @@ function CogIcon() {
 function LightbulbIcon() {
   return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18h6" /><path d="M10 22h4" /><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" /></svg>;
 }
-
-function SearchLinesIcon() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="3" y1="6" x2="21" y2="6" />
-      <line x1="3" y1="12" x2="15" y2="12" />
-      <line x1="3" y1="18" x2="11" y2="18" />
-      <circle cx="18" cy="15" r="3" />
-      <line x1="20.2" y1="17.2" x2="22" y2="19" />
-    </svg>
-  );
-}
-
-function CalendarBoxCheckIcon() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-      <line x1="16" y1="2" x2="16" y2="6" />
-      <line x1="8" y1="2" x2="8" y2="6" />
-      <line x1="3" y1="10" x2="21" y2="10" />
-      <path d="m9 16 2 2 4-4" />
-    </svg>
-  );
-}
-
-function RunningPersonIcon() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M19 17l-2 3" />
-      <path d="M13 14l-2-4-3 1" />
-      <path d="M6 18l2-4 3-2 3 1 2-2" />
-      <circle cx="14" cy="5" r="1" />
-    </svg>
-  );
-}
+
