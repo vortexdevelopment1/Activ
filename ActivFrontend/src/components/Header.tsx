@@ -27,9 +27,9 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
           aria-label="ACTIV home"
         >
           <img
-            src="/logo.png"
+            src="/Activlogo.svg"
             alt="ACTIV"
-            className="h-10 w-auto object-contain"
+            className="h-[52px] w-[124px] object-contain"
           />
         </button>
 
@@ -49,11 +49,10 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }
                 }}
-                className={`text-sm font-medium transition-colors bg-transparent border-none cursor-pointer ${
-                  isActive
+                className={`text-[17px] font-medium transition-colors bg-transparent border-none cursor-pointer ${isActive
                     ? "text-[#c8f31d]"
                     : "text-white/80 hover:text-white"
-                }`}
+                  }`}
               >
                 {link.label}
               </button>
@@ -97,11 +96,10 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
 
       {/* Mobile nav panel with In and Out animations */}
       <div
-        className={`mx-auto max-w-6xl overflow-hidden transition-all duration-300 ease-in-out md:hidden ${
-          menuOpen
+        className={`mx-auto max-w-6xl overflow-hidden transition-all duration-300 ease-in-out md:hidden ${menuOpen
             ? "max-h-96 opacity-100 mt-2 pointer-events-auto"
             : "max-h-0 opacity-0 mt-0 pointer-events-none"
-        }`}
+          }`}
       >
         <nav className="flex flex-col gap-1 rounded-2xl border border-white/10 bg-[#000000] p-3 backdrop-blur-md">
           {NAV_LINKS.map((link) => {
@@ -119,11 +117,10 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }
                 }}
-                className={`w-full text-left rounded-lg px-3 py-2 text-sm font-medium transition-colors bg-transparent border-none cursor-pointer ${
-                  isActive
+                className={`w-full text-left rounded-lg px-3 py-2 text-sm font-medium transition-colors bg-transparent border-none cursor-pointer ${isActive
                     ? "bg-white/5 text-[#c8f31d]"
                     : "text-white/80 hover:bg-white/5 hover:text-white"
-                }`}
+                  }`}
               >
                 {link.label}
               </button>

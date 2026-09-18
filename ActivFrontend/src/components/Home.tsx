@@ -319,7 +319,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
             <div className="mt-8">
               <a
-                href="#home"
+                href="/players"
                 className="inline-flex items-center gap-2 rounded-[1px] bg-[#EAE6DF] px-6 py-3 text-sm font-semibold text-black transition-transform hover:scale-[1.02]"
               >
                 See how it works <span aria-hidden="true">→</span>
@@ -393,7 +393,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
             <div className="mt-8">
               <a
-                href="#home"
+                href="/venue-partners"
                 className="inline-flex items-center gap-2 rounded-[1px] bg-[#EAE6DF] px-6 py-3 text-sm font-semibold text-black transition-transform hover:scale-[1.02]"
               >
                 See how it works <span aria-hidden="true">→</span>

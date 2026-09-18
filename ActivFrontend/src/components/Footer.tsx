@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { API } from "../config/api";
 
 const COMMUNITY_LINKS = [
-  { label: "Merch", emoji: "🔥", href: "#merch" },
-  { label: "Podcast", emoji: "🎙️", href: "#podcast" },
+  { label: "Merch", emoji: "🔥", href: "https://activmerch.com" },
+  { label: "Podcast", emoji: "🎙️", href: "https://www.youtube.com/@ACTIVMinds" },
 ];
 
 const SUPPORT_LINKS = [
@@ -44,68 +44,54 @@ export default function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="border-t border-white/10 bg-[#0D0F06] px-4 pb-8 pt-14 sm:px-6">
       <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-[2fr_1fr_0fr]">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-[2fr_1fr_1fr]">
           {/* Brand column */}
           <div>
             <button
               onClick={() => onNavigate("home")}
-              className="flex items-center bg-transparent border-none cursor-pointer text-left"
+              className="flex items-center bg-transparent border-none cursor-pointer text-left ml-[10px]"
               aria-label="ACTIV home"
             >
               <img
-                src="/logo.png"
+                src="/Activlogo.svg"
                 alt="ACTIV"
-                className="h-20 w-auto object-contain"
+                className="h-[52px] w-[124px] object-contain"
               />
             </button>
-            <p className="mt-3 max-w-xs text-[15px] leading-relaxed text-white/50 ml-3">
+            <p className="mt-3 max-w-[400px] text-[20px] leading-relaxed text-white/80 ml-3">
               Empowering people to move, helping venues thrive, and building
               healthier communities together.
             </p>
 
-            <div className="mt-5 flex flex-wrap gap-3 ml-[8px]">
+            <div className="mt-5 flex flex-wrap gap-2 ml-[8px]">
               <a
-                href="#"
-                className="flex items-center gap-2 rounded-lg border border-white/15 bg-black px-3 py-2 transition-colors hover:bg-white/10"
+                href="https://play.google.com/store/apps/details?id=com.activ.partnerapp"
+                className="transition-opacity hover:opacity-80 inline-block"
                 aria-label="Get it on Google Play"
               >
-                <PlayStoreIcon />
-                <span className="leading-tight">
-                  <span className="block text-[9px] text-white/60">GET IT ON</span>
-                  <span className="block text-xs font-semibold text-white">
-                    Google Play
-                  </span>
-                </span>
+                <img src="/Playstore.svg" alt="" className="h-[40px] w-[175px] object-contain" />
               </a>
               <a
                 href="#"
-                className="flex items-center gap-2 rounded-lg border border-white/15 bg-black px-3 py-2 transition-colors hover:bg-white/10"
+                className="transition-opacity hover:opacity-80 inline-block"
                 aria-label="Download on the App Store"
               >
-                <AppleIcon />
-                <span className="leading-tight">
-                  <span className="block text-[9px] text-white/60">
-                    Download on the
-                  </span>
-                  <span className="block text-xs font-semibold text-white">
-                    App Store
-                  </span>
-                </span>
+                <img src="/Applestore.svg" alt="" className="h-[40px] w-[175px] object-contain" />
               </a>
             </div>
           </div>
 
           {/* Community column */}
           <div>
-            <h3 className="text-[20px] font-semibold text-white">Community</h3>
+            <h3 className="text-[22px] font-semibold text-white ml-[20px]">Community</h3>
             <ul className="mt-4 space-y-3">
               {COMMUNITY_LINKS.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="inline-flex items-center gap-2 text-[15px] text-white/60 transition-colors hover:text-white"
+                    className="inline-flex items-center gap-2 text-[18px] text-white/60 transition-colors hover:text-white ml-[10px]"
                   >
-                    <span aria-hidden="true" className="brightness-150 saturate-150 drop-shadow-md">{link.emoji}</span>
+                    <span aria-hidden="true" className="brightness-150 saturate-150 drop-shadow-md ml-[10px]">{link.emoji}</span>
                     {link.label}
                   </a>
                 </li>
@@ -115,7 +101,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Support column */}
           <div>
-            <h3 className="text-[20px] font-semibold text-white">Support</h3>
+            <h3 className="text-[22px] font-semibold text-white ml-[100px]">Support</h3>
             <ul className="mt-4 space-y-3">
               {SUPPORT_LINKS.map((link) => (
                 <li key={link.label}>
@@ -132,7 +118,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                         });
                       });
                     }}
-                    className="text-[15px] text-white/60 transition-colors hover:text-white"
+                    className="text-[18px] text-white/60 transition-colors hover:text-white ml-[100px]"
                   >
                     {link.label}
                   </a>
@@ -140,10 +126,10 @@ export default function Footer({ onNavigate }: FooterProps) {
               ))}
             </ul>
 
-            <p className="mt-6 text-sm text-white/60">Get in touch</p>
+            <p className="mt-6 text-[18px] text-white/60 ml-[100px]">Get in touch</p>
             <a
               href="mailto:Support@activ.live"
-              className="text-sm font-medium text-[#c8f31d] hover:underline"
+              className="text-[15px] font-medium text-[#c8f31d] hover:underline ml-[100px]"
             >
               Support@activ.live
             </a>
@@ -166,7 +152,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <img
                   src={icon}
                   alt=""
-                  className="h-[18px] w-[18px] object-contain"
+                  className="h-[25px] w-[25px] object-contain"
                 />
               </a>
             ))}
@@ -176,30 +162,3 @@ export default function Footer({ onNavigate }: FooterProps) {
     </footer>
   );
 }
-
-function PlayStoreIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2.5 1.6c-.3.3-.5.7-.5 1.2v12.4c0 .5.2.9.5 1.2l.1.1L9.9 9V8.8L2.6 1.5l-.1.1Z" fill="#00D2FF" />
-      <path d="M12.3 11.4 9.9 9v-.2l2.4-2.4 3 1.7c.9.5.9 1.3 0 1.8l-3 1.5Z" fill="#FFD400" />
-      <path d="M12.3 11.4 9.9 8.9l-7.4 7.5c.3.3.8.3 1.3.1l8.5-4.9v-.2Z" fill="#FF3A44" />
-      <path d="M12.3 6.4 3.8 1.5c-.5-.3-1-.2-1.3.1l7.4 7.4 2.4-2.6Z" fill="#00F076" />
-    </svg>
-  );
-}
-
-function AppleIcon() {
-  return (
-    <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M13.1 9.5c0-1.9 1.5-2.8 1.6-2.9-.9-1.3-2.2-1.5-2.7-1.5-1.2-.1-2.3.7-2.9.7-.6 0-1.5-.7-2.5-.7-1.3 0-2.4.7-3.1 1.9-1.3 2.3-.3 5.7 1 7.6.6.9 1.3 1.9 2.3 1.9.9 0 1.3-.6 2.4-.6s1.4.6 2.4.6c1 0 1.6-.9 2.2-1.8.7-1 1-2 1-2.1-.1 0-2-.8-2-3.1h.2Z"
-        fill="white"
-      />
-      <path
-        d="M11 3.6c.5-.6.8-1.4.8-2.2-.7 0-1.6.5-2.1 1.1-.5.5-.9 1.3-.8 2.1.8.1 1.6-.4 2.1-1Z"
-        fill="white"
-      />
-    </svg>
-  );
-}
-
