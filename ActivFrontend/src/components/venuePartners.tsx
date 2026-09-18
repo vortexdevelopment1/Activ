@@ -194,58 +194,27 @@ export default function VenuePartnersv() {
           </p>
         </AnimateOnScroll>
 
-        <AnimateOnScroll direction="right" className="mx-auto max-w-6xl mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="relative flex flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] overflow-hidden">
-            <img src="/eye.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-            <div className="absolute top-5 right-0 pointer-events-none">
-              <img src="/venuepartners/Union.png" alt="" className="w-19 h-19 object-contain opacity-90" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-white">Get Discovered Faster</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">
-                Reach every player searching for a venue in your area, without depending on Instagram, word of mouth or hoping someone tags you in a story.
-              </p>
-            </div>
-          </div>
-
-          <div className="relative flex flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] overflow-hidden">
-            <img src="/calender1.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-            <div className="absolute top-5 right-0 pointer-events-none">
-              <img src="/venuepartners/Union.png" alt="" className="w-19 h-19 object-contain opacity-90" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-white">Bookings without the back-and-forth</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">
-                24/7 bookings on a calendar that prevents double-booking and gives you full control over slots, pricing and availability across every court you run.
-              </p>
-            </div>
-          </div>
-
-          <div className="relative flex flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] overflow-hidden">
-            <img src="/Setting.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-            <div className="absolute top-5 right-0 pointer-events-none">
-              <img src="/venuepartners/Union.png" alt="" className="w-19 h-19 object-contain opacity-90" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-white">Payments that don't go missing</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">
-                Money flows in cleanly, with statements your accountant can read. See exactly where revenue is coming from, slot by slot.
-              </p>
-            </div>
-          </div>
-
-          <div className="relative flex flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] overflow-hidden">
-            <img src="/Bulb.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-            <div className="absolute top-5 right-0 pointer-events-none">
-              <img src="/venuepartners/Union.png" alt="" className="w-19 h-19 object-contain opacity-90" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-white">A real human, not a ticket queue</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">
-                Real partner support on the other end of the line. We help you set up, get listed and clear blockers fast, because nobody's growing while waiting on a support ticket.
-              </p>
-            </div>
-          </div>
+        <AnimateOnScroll direction="right" className="mx-auto max-w-6xl mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          <FeatureCard 
+            icon="/eye.png"
+            title="Get Discovered Faster"
+            text="Reach every player searching for a venue in your area, without depending on Instagram, word of mouth or hoping someone tags you in a story."
+          />
+          <FeatureCard 
+            icon="/calender1.png"
+            title="Bookings without the back-and-forth"
+            text="24/7 bookings on a calendar that prevents double-booking and gives you full control over slots, pricing and availability across every court you run."
+          />
+          <FeatureCard 
+            icon="/Setting.png"
+            title="Payments that don't go missing"
+            text="Money flows in cleanly, with statements your accountant can read. See exactly where revenue is coming from, slot by slot."
+          />
+          <FeatureCard 
+            icon="/Bulb.png"
+            title="A real human, not a ticket queue"
+            text="Real partner support on the other end of the line. We help you set up, get listed and clear blockers fast, because nobody's growing while waiting on a support ticket."
+          />
         </AnimateOnScroll>
       </section>
 
@@ -264,12 +233,12 @@ export default function VenuePartnersv() {
               Create Your <br />
               <span className="text-[#c8f31d]">Partner Account</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg">
+            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-[515px]">
               Download the ACTIV Partner app and create your account in minutes. Add your contact details and primary venue information, and you're onboarded. No paperwork, no complicated setup, no waiting around for someone to call you back.
             </p>
           </AnimateOnScroll>
 
-          <div className="hidden lg:flex flex-col items-center justify-center h-full">
+          <div className="hidden lg:flex flex-col items-center justify-center h-full ml-[-15px]">
             <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)] relative z-10">
               <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">01</span>
             </div>
@@ -308,7 +277,7 @@ export default function VenuePartnersv() {
               Showcase What <br />
               <span className="text-[#c8f31d]">Your Venue Offers</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg">
+            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-[430px]">
               Add your venue details, location, activities, photos and amenities, so players see exactly what they're booking before they show up. The more they see, the faster they decide.
             </p>
           </AnimateOnScroll>
@@ -353,7 +322,7 @@ export default function VenuePartnersv() {
               Quality Venues <br />
               <span className="text-[#c8f31d]">Build Trust</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg">
+            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-[450px]">
               Submit your venue documents and business details for verification. Our team reviews every listing before it goes live, which keeps the standard high and the platform trustworthy. Once approved, your venue is discoverable to every nearby player ready to book.
             </p>
           </AnimateOnScroll>
@@ -514,5 +483,33 @@ function GooglePlayIcon() {
       <circle cx="4" cy="15" r="1.2" />
       <circle cx="7" cy="15" r="1.2" />
     </svg>
+  );
+}
+
+function FeatureCard({ icon, title, text }: { icon: string; title: string; text: string }) {
+  return (
+    <div 
+      className="group relative flex h-full min-h-[300px] flex-col justify-start rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] overflow-hidden cursor-pointer transition-all duration-700 hover:border-white/20"
+    >
+      <img src={icon} alt="" className="h-14 w-14 shrink-0 object-contain" />
+      <div className="absolute top-6 right-6 pointer-events-none">
+        <img src="/venuepartners/Union.png" alt="" className="w-8 h-8 object-contain opacity-20 transition-opacity duration-700 group-hover:opacity-60" />
+      </div>
+      
+      <div className="flex flex-col flex-1 transition-all duration-700 mt-[80px] group-hover:mt-6">
+        <h3 className="font-bold tracking-tight text-[#c8f31d] transition-all duration-700 text-xl sm:text-2xl group-hover:text-[24px]">
+          {title}
+        </h3>
+        
+        <div className="grid transition-all duration-700 ease-in-out grid-rows-[0fr] opacity-0 mt-0 group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-4">
+          <div className="overflow-hidden">
+            <hr className="mb-4 border-[#333]" />
+            <p className="text-sm text-white/80 leading-relaxed">
+              {text}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

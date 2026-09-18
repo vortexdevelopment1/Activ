@@ -213,8 +213,8 @@ export default function Players() {
           </p>
         </AnimateOnScroll>
 
-        <AnimateOnScroll direction="right" className="relative mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="relative flex min-h-[250px] flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+        <AnimateOnScroll direction="right" className="relative mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
+          <div className="relative flex h-full flex-col justify-start gap-8 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
             <img src="/eye.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
             <div className="absolute top-5 right-0 pointer-events-none">
               <img src="/players/Union.png" alt="" className="w-19 h-19 object-contain" />
@@ -227,7 +227,7 @@ export default function Players() {
             </div>
           </div>
 
-          <div className="relative flex min-h-[210px] flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+          <div className="relative flex h-full flex-col justify-start gap-8 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
             <img src="/calender1.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
             <div className="absolute top-5 right-0 pointer-events-none">
               <img src="/players/Union.png" alt="" className="w-19 h-19 object-contain" />
@@ -240,7 +240,7 @@ export default function Players() {
             </div>
           </div>
 
-          <div className="relative flex min-h-[210px] flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+          <div className="relative flex h-full flex-col justify-start gap-8 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
             <img src="/Setting.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
             <div className="absolute top-5 right-0 pointer-events-none">
               <img src="/players/Union.png" alt="" className="w-19 h-19 object-contain" />
@@ -253,7 +253,7 @@ export default function Players() {
             </div>
           </div>
 
-          <div className="relative flex min-h-[210px] flex-col justify-between rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
+          <div className="relative flex h-full flex-col justify-start gap-8 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
             <img src="/Bulb.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
             <div className="absolute top-5 right-0 pointer-events-none">
               <img src="/players/Union.png" alt="" className="w-19 h-19 object-contain" />
@@ -283,7 +283,7 @@ export default function Players() {
               From "I should" <br />
               to <span className="text-[#c8f31d]">"I'm there"</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg">
+            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg  w-[490px]">
               Start with what you want to do. Choose the activity that fits your mood, your schedule, or your energy. From football and badminton to gyms, wellness and more — ACTIV helps you find it.
             </p>
           </AnimateOnScroll>
@@ -328,7 +328,7 @@ export default function Players() {
               Find what's <br />
               <span className="text-[#c8f31d]">Near You</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg">
+            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg  w-[480px]">
               Open ACTIV and explore verified venues near you. Browse by sport, activity, or what's available now. Compare your options, check the details, and find a place that fits what you're looking for.
             </p>
           </AnimateOnScroll>
@@ -422,13 +422,13 @@ export default function Players() {
               Walk in <br />
               <span className="text-[#c8f31d]">Expected</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg">
+            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-[530px]">
               No reception confusion, no "are you the 6 pm booking?" The venue knows your name and your slot before you arrive. Every session gets logged, so the streak builds itself.
             </p>
           </AnimateOnScroll>
 
           {/* Middle: Step connector */}
-          <div className="hidden lg:flex flex-col items-center justify-center h-full">
+          <div className="hidden lg:flex flex-col items-center justify-center h-full ml-[-30px]">
             <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)] relative z-10">
               <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">04</span>
             </div>

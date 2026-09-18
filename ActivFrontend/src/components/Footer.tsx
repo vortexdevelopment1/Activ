@@ -138,10 +138,10 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
-          <p className="text-[15px] text-white">
+          <p className="text-[18px] text-white">
             © 2026 Activpulse Booking Pvt. Ltd. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-[2.3rem]">
             {socialItems.map(({ label, href, icon }) => (
               <a
                 key={label}
@@ -152,7 +152,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <img
                   src={icon}
                   alt=""
-                  className="h-[25px] w-[25px] object-contain"
+                  className="h-[30px] w-[30px] object-contain"
                 />
               </a>
             ))}

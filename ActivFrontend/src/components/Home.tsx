@@ -442,8 +442,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* Section 4: Why Trust Activ (Testimonials) - With AbstractDesign.png Background Image */}
-      <section className="scroll-section relative bg-[#0F0F0F] px-4 py-20 sm:px-6 sm:py-28 overflow-hidden">
-        {/* AbstractDesign.png Background Image Container */}
+      {/* <section className="scroll-section relative bg-[#0F0F0F] px-4 py-20 sm:px-6 sm:py-28 overflow-hidden">
         <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[600px] h-[400px] pointer-events-none opacity-80 z-0 overflow-hidden flex justify-center">
           <img
             src="/players/AbstractDesign.png"
@@ -456,7 +455,6 @@ export default function Home({ onNavigate }: HomeProps) {
           />
         </div>
 
-        {/* Decorative background: side circle arcs (matches Figma) */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <CircleArc className="top-1/2 -left-52 -translate-y-1/2 h-[420px] w-[420px] opacity-60" />
           <CircleArc className="top-1/2 -right-52 -translate-y-1/2 h-[420px] w-[420px] opacity-60" />
@@ -513,7 +511,7 @@ export default function Home({ onNavigate }: HomeProps) {
             </div>
           </AnimateOnScroll>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
@@ -569,15 +567,15 @@ function ChevronBracket({ className = "" }: { className?: string }) {
   );
 }
 
-function CircleArc({ className = "" }: { className?: string }) {
-  return (
-    <svg className={`absolute ${className}`} viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="200" cy="200" r="198" stroke="#ffffff" strokeOpacity="0.09" strokeWidth="1" />
-      <circle cx="200" cy="200" r="150" stroke="#ffffff" strokeOpacity="0.07" strokeWidth="1" />
-      <circle cx="200" cy="200" r="105" stroke="#ffffff" strokeOpacity="0.05" strokeWidth="1" />
-    </svg>
-  );
-}
+// function CircleArc({ className = "" }: { className?: string }) {
+//   return (
+//     <svg className={`absolute ${className}`} viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+//       <circle cx="200" cy="200" r="198" stroke="#ffffff" strokeOpacity="0.09" strokeWidth="1" />
+//       <circle cx="200" cy="200" r="150" stroke="#ffffff" strokeOpacity="0.07" strokeWidth="1" />
+//       <circle cx="200" cy="200" r="105" stroke="#ffffff" strokeOpacity="0.05" strokeWidth="1" />
+//     </svg>
+//   );
+// }
 
 // Icons
 function PlayerIcon() {
