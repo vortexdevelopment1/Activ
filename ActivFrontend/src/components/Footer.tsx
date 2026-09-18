@@ -72,7 +72,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <img src="/Playstore.svg" alt="" className="h-[40px] w-[175px] object-contain" />
               </a>
               <a
-                href="#"
+                href="https://apps.apple.com/in/app/activ-partner/id6793596032"
                 className="transition-opacity hover:opacity-80 inline-block"
                 aria-label="Download on the App Store"
               >
