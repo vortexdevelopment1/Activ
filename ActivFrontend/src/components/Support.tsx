@@ -8,78 +8,10 @@ interface FaqItem {
   answer: string;
 }
 
-const PLAYERS_FAQS: FaqItem[] = [
-  {
-    question: "When will the ACTIV app be available?",
-    answer: "ACTIV is rolling out across major cities soon. Download the app on iOS or Android to check availability in your area and pre-register your account.",
-  },
-  {
-    question: "How does ACTIV ensure venue quality?",
-    answer: "Every single venue on ACTIV is physically reviewed and verified by our team before listing to ensure real photos, proper equipment, and accurate live availability.",
-  },
-  {
-    question: "What happens if I'm running late for a booking?",
-    answer: "You can view your booking details and directly contact the venue manager through the app to inform them of any minor schedule changes.",
-  },
-  {
-    question: "Can I cancel or get a refund on a booking?",
-    answer: "Yes, cancellations made within the permitted venue window are fully refunded back to your source account instantly.",
-  },
-  {
-    question: "Can I share my booking with friends?",
-    answer: "Absolutely! You can share booking confirmation links directly via WhatsApp or copy details to share with your group instantly.",
-  },
-  {
-    question: "How do I find only verified venues near me?",
-    answer: "All venues listed on ACTIV are pre-vetted. Use location permissions or search by your preferred area to see active spaces immediately.",
-  },
-];
-
-const VENUE_FAQS: FaqItem[] = [
-  {
-    question: "What types of venues can partner with ACTIV?",
-    answer: "Turfs, badminton courts, pickleball arenas, fitness studios, yoga spaces, gyms, and sports complexes of all sizes.",
-  },
-  {
-    question: "What's the commission structure on ACTIV?",
-    answer: "We maintain transparent per-booking models with zero setup costs or hidden subscription overheads.",
-  },
-  {
-    question: "How long does the approval process take?",
-    answer: "Most venues go live within 24 hours following quick verification and slot configuration by our onboarding team.",
-  },
-  {
-    question: "Can I control my pricing and availability?",
-    answer: "Yes, you have full real-time control over slot pricing, peak hours, blackout dates, and court availability via your partner dashboard.",
-  },
-  {
-    question: "How do I receive payments for bookings?",
-    answer: "Payments are processed securely online and settled directly to your registered bank account on a scheduled cycle.",
-  },
-  {
-    question: "What support does ACTIV provide partners?",
-    answer: "Dedicated account management, technical assistance, marketing boost in local search results, and 24/7 operational support.",
-  },
-];
-
-const PLATFORM_FAQS: FaqItem[] = [
-  {
-    question: "Which cities is ACTIV launching in?",
-    answer: "We are actively expanding across Mumbai, Bengaluru, Hyderabad, Delhi-NCR, Pune, and major tier-1 sports hubs.",
-  },
-  {
-    question: "How do I cancel or reschedule a booking?",
-    answer: "Navigate to your bookings tab in the app, select the active reservation, and tap modify or cancel according to venue policy.",
-  },
-  {
-    question: "What happens if a venue cancels on me?",
-    answer: "In rare cases of venue-side cancellations, you receive an immediate full refund plus priority re-booking options.",
-  },
-  {
-    question: "How do I reach the ACTIV team?",
-    answer: "You can reach us anytime at Support@activ.live or submit the direct contact form below for prompt assistance.",
-  },
-];
+interface FaqItemWithCategory extends FaqItem {
+  id: string;
+  category: string;
+}
 
 // Reusable scroll animation wrapper matching Home.tsx
 function AnimateOnScroll({
@@ -132,6 +64,19 @@ export default function Support() {
   const [openPlayerFaq, setOpenPlayerFaq] = useState<number | null>(null);
   const [openVenueFaq, setOpenVenueFaq] = useState<number | null>(null);
   const [openPlatformFaq, setOpenPlatformFaq] = useState<number | null>(null);
+
+  const [faqs, setFaqs] = useState<FaqItemWithCategory[]>([]);
+
+  useEffect(() => {
+    fetch(`${API}/faqs`)
+      .then(res => res.json())
+      .then(data => setFaqs(data))
+      .catch(console.error);
+  }, []);
+
+  const playersFaqs = faqs.filter(f => f.category === "Players");
+  const venueFaqs = faqs.filter(f => f.category === "Venue partners");
+  const platformFaqs = faqs.filter(f => f.category === "Platform & Support");
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -236,7 +181,7 @@ export default function Support() {
                 </span>
               </div>
               <div className="space-y-3">
-                {PLAYERS_FAQS.map((faq, index) => {
+                {playersFaqs.map((faq, index) => {
                   const isOpen = openPlayerFaq === index;
                   return (
                     <div
@@ -269,7 +214,7 @@ export default function Support() {
                 </span>
               </div>
               <div className="space-y-3">
-                {PLATFORM_FAQS.map((faq, index) => {
+                {platformFaqs.map((faq, index) => {
                   const isOpen = openPlatformFaq === index;
                   return (
                     <div
@@ -303,7 +248,7 @@ export default function Support() {
               </span>
             </div>
             <div className="space-y-3">
-              {VENUE_FAQS.map((faq, index) => {
+              {venueFaqs.map((faq, index) => {
                 const isOpen = openVenueFaq === index;
                 return (
                   <div
