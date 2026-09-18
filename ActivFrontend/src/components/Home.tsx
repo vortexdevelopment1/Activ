@@ -251,36 +251,42 @@ export default function Home({ onNavigate }: HomeProps) {
           </AnimateOnScroll>
 
           <AnimateOnScroll direction="right" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-[#c8f31d]/60 text-[#c8f31d] shadow-[0_0_10px_rgba(200,243,29,0.3)]">
-                <EyeIcon />
+            <div className="rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] flex flex-col">
+              <div className="flex items-center gap-4">
+                <img src="/eye.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
+                <h3 className="text-[20px] font-semibold text-white">Real venues, near you</h3>
               </div>
-              <h3 className="text-lg font-semibold text-white">Real venues, near you</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">
+              <p className="mt-4 text-[15px] text-white/60 leading-relaxed">
                 Vetted turfs, courts, gyms, studios and wellness spaces, all in one app. The places worth showing up to, with none of the hunt.
               </p>
             </div>
 
-            <div className="rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <img src="/Light.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-              <h3 className="text-lg font-semibold text-white">Instant Bookings</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">
+            <div className="rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] flex flex-col">
+              <div className="flex items-center gap-4">
+                <img src="/Light.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
+                <h3 className="text-[20px] font-semibold text-white">Instant Bookings</h3>
+              </div>
+              <p className="mt-4 text-[15px] text-white/60 leading-relaxed">
                 Live availability, direct booking, and secure payments. The booking lands in your dashboard before the player finishes tying their laces.
               </p>
             </div>
 
-            <div className="rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <img src="/Growth.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-              <h3 className="text-lg font-semibold text-white">Growth Insights</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">
+            <div className="rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] flex flex-col">
+              <div className="flex items-center gap-4">
+                <img src="/Growth.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
+                <h3 className="text-[20px] font-semibold text-white">Growth Insights</h3>
+              </div>
+              <p className="mt-4 text-[15px] text-white/60 leading-relaxed">
                 Revenue, occupancy and peak-hour patterns, updated through the day. Pricing and scheduling stop being guesses.
               </p>
             </div>
 
-            <div className="rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <img src="/Check.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-              <h3 className="text-lg font-semibold text-white">Verified Quality</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">
+            <div className="rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] flex flex-col">
+              <div className="flex items-center gap-4">
+                <img src="/Check.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
+                <h3 className="text-[20px] font-semibold text-white">Verified Quality</h3>
+              </div>
+              <p className="mt-4 text-[15px] text-white/60 leading-relaxed">
                 Every venue on ACTIV is reviewed by our team before it goes live, so players know what they're walking into.
               </p>
             </div>
@@ -314,7 +320,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <div className="mt-8">
               <a
                 href="#home"
-                className="inline-flex items-center gap-2 rounded-full bg-[#EAE6DF] px-6 py-3 text-sm font-semibold text-black transition-transform hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 rounded-[1px] bg-[#EAE6DF] px-6 py-3 text-sm font-semibold text-black transition-transform hover:scale-[1.02]"
               >
                 See how it works <span aria-hidden="true">→</span>
               </a>
@@ -388,7 +394,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <div className="mt-8">
               <a
                 href="#home"
-                className="inline-flex items-center gap-2 rounded-full bg-[#EAE6DF] px-6 py-3 text-sm font-semibold text-black transition-transform hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 rounded-[1px] bg-[#EAE6DF] px-6 py-3 text-sm font-semibold text-black transition-transform hover:scale-[1.02]"
               >
                 See how it works <span aria-hidden="true">→</span>
               </a>
