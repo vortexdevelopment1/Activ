@@ -48,7 +48,31 @@ function AnimateOnScroll({
   );
 }
 
+const CARDS_DATA = [
+  {
+    icon: "/Search.png",
+    title: "The Saturday regular",
+    desc: "Same studio, same friend group, same 7am start. ACTIV remembers your favourites and books them in three taps."
+  },
+  {
+    icon: "/Calender.png",
+    title: "The first-time anything",
+    desc: "Never tried it before? Every venue listing shows exactly what to expect, what to bring, and what it costs — so trying something new doesn't need a referral."
+  },
+  {
+    icon: "/Running.png",
+    title: "The Comeback",
+    desc: "Six months off, one booking back in. No judgment, no starting-over ritual — just a slot with your name on it whenever you're ready."
+  },
+  {
+    icon: "/Running.png",
+    title: "The friend group plan",
+    desc: "Someone books, everyone shows up. Share the slot with the group and turn \"we should play\" into an actual game."
+  }
+];
+
 export default function Players() {
+  const [openCardIndex, setOpenCardIndex] = useState<number | null>(null);
   // Video should be fully visible as soon as it can actually play, with a
   // short fallback timer so the poster/black background never lingers past ~1s.
   const [videoVisible, setVideoVisible] = useState(false);
@@ -254,8 +278,9 @@ export default function Players() {
 
       {/* 3. Step 01: From "I should" to "I'm there" */}
       <section className="scroll-section relative overflow-hidden border-t border-white/5 px-4 py-20 sm:px-6 sm:py-28">
+        <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-transparent to-white/15 z-0" />
         <SectionGrid />
-        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto_1fr]">
+        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto_1fr] z-10">
           <AnimateOnScroll direction="left">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c8f31d]/30 bg-[#c8f31d]/10 px-3.5 py-1 backdrop-blur-sm">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#c8f31d]">
@@ -273,11 +298,9 @@ export default function Players() {
 
           {/* Middle: Step connector */}
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
-            <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
-            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
+            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)] relative z-10">
               <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">01</span>
             </div>
-            <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
           </div>
 
           <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
@@ -300,8 +323,9 @@ export default function Players() {
 
       {/* 4. Step 02: Find what's Near You */}
       <section className="scroll-section relative overflow-hidden border-t border-white/5 px-4 py-20 sm:px-6 sm:py-28">
+        <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-white/15 z-0" />
         <SectionGrid />
-        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto_1fr]">
+        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto_1fr] z-10">
           <AnimateOnScroll direction="left">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c8f31d]/30 bg-[#c8f31d]/10 px-3.5 py-1 backdrop-blur-sm">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#c8f31d]">
@@ -319,11 +343,9 @@ export default function Players() {
 
           {/* Middle: Step connector */}
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
-            <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
-            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
+            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)] relative z-10">
               <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">02</span>
             </div>
-            <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
           </div>
 
           <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
@@ -350,8 +372,9 @@ export default function Players() {
 
       {/* 5. Step 03: Book in The App */}
       <section className="scroll-section relative overflow-hidden border-t border-white/5 px-4 py-20 sm:px-6 sm:py-28">
+        <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-white/15 z-0" />
         <SectionGrid />
-        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto_1fr]">
+        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto_1fr] z-10">
           <AnimateOnScroll direction="left">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c8f31d]/30 bg-[#c8f31d]/10 px-3.5 py-1 backdrop-blur-sm">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#c8f31d]">
@@ -369,11 +392,9 @@ export default function Players() {
 
           {/* Middle: Step connector */}
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
-            <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
-            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
+            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)] relative z-10">
               <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">03</span>
             </div>
-            <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
           </div>
 
           <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
@@ -396,8 +417,9 @@ export default function Players() {
 
       {/* 6. Step 04: Walk in Expected */}
       <section className="scroll-section relative overflow-hidden border-t border-white/5 px-4 py-20 sm:px-6 sm:py-28">
+        <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-gradient-to-t from-transparent to-white/15 z-0" />
         <SectionGrid />
-        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto_1fr]">
+        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto_1fr] z-10">
           <AnimateOnScroll direction="left">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c8f31d]/30 bg-[#c8f31d]/10 px-3.5 py-1 backdrop-blur-sm">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#c8f31d]">
@@ -415,11 +437,9 @@ export default function Players() {
 
           {/* Middle: Step connector */}
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
-            <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
-            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
+            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)] relative z-10">
               <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">04</span>
             </div>
-            <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
           </div>
 
           <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
@@ -462,34 +482,35 @@ export default function Players() {
           </AnimateOnScroll>
 
           <AnimateOnScroll direction="right" className="flex flex-col gap-4">
-            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <img src="/Search.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-              <div>
-                <h3 className="text-base font-semibold text-white">The Saturday regular</h3>
-                <p className="mt-1 text-xs text-white/50">Same studio, same friend group, same 7am start. ACTIV remembers your favourites and books them in three taps.</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <img src="/Calender.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-              <div>
-                <h3 className="text-[15px] font-semibold text-white">The first-time anything</h3>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <img src="/Running.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-              <div>
-                <h3 className="text-[15px] font-semibold text-white">The Comeback</h3>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <img src="/Running.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-              <div>
-                <h3 className="text-[15px] font-semibold text-white">The friend group plan</h3>
-              </div>
-            </div>
+            {CARDS_DATA.map((card, index) => {
+              const isOpen = openCardIndex === index;
+              return (
+                <div
+                  key={index}
+                  onClick={() => setOpenCardIndex(isOpen ? null : index)}
+                  className="flex items-start gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] cursor-pointer transition-colors hover:bg-black"
+                >
+                  <img src={card.icon} alt="" className="h-16 w-16 shrink-0 object-contain" />
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between h-16">
+                      <h3 className="text-[20px] font-semibold text-white">{card.title}</h3>
+                      <svg
+                        className={`h-4 w-4 shrink-0 text-white/60 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </div>
+                    {isOpen && (
+                      <p className="pb-2 pr-4 text-[15px] text-white/50 leading-relaxed">{card.desc}</p>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </AnimateOnScroll>
         </div>
       </section>
@@ -543,7 +564,7 @@ function SectionGrid() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 opacity-70 [background-image:linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:72px_72px]"
+      className="pointer-events-none absolute inset-0 opacity-100 [background-image:linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:72px_72px]"
     />
   );
 }
@@ -595,4 +616,4 @@ function CogIcon() {
 function LightbulbIcon() {
   return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18h6" /><path d="M10 22h4" /><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" /></svg>;
 }
-
+

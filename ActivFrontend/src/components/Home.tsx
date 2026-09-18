@@ -52,7 +52,45 @@ function AnimateOnScroll({
   );
 }
 
+const PLAYERS_CARDS = [
+  {
+    icon: "/Search.png",
+    title: "Find what's good",
+    desc: "Discover venues perfectly suited for your sport, location, and schedule."
+  },
+  {
+    icon: "/Calender.png",
+    title: "Book in seconds",
+    desc: "Live availability and instant confirmation. Skip the calls and WhatsApp messages."
+  },
+  {
+    icon: "/Running.png",
+    title: "Try anything",
+    desc: "From turf to tennis, yoga to gyms. Explore different sports and wellness spaces easily."
+  }
+];
+
+const VENUE_CARDS = [
+  {
+    icon: "/Discover.png",
+    title: "Discover Your Next Favorite Spot",
+    desc: "Your venue appears in search results for thousands of people looking for sports & wellness experiences near them. More visibility means more bookings — without spending on ads."
+  },
+  {
+    icon: "/Clock.png",
+    title: "Automate Your Operations",
+    desc: "Accept bookings 24/7, manage time slots, handle cancellations, and track payments — all from one app. No more phone calls, WhatsApp chaos, or manual registers."
+  },
+  {
+    icon: "/Heart.png",
+    title: "Build Community Loyalty",
+    desc: "Deliver consistent quality experiences backed by user reviews and ratings. Happy members return, recommend, and bring their circles. That's sustainable growth."
+  }
+];
+
 export default function Home({ onNavigate }: HomeProps) {
+  const [openPlayerCard, setOpenPlayerCard] = useState<number | null>(null);
+  const [openVenueCard, setOpenVenueCard] = useState<number | null>(null);
   // Video should be fully visible as soon as it can actually play, with a
   // short fallback timer so the poster/black background never lingers past ~1s.
   const [videoVisible, setVideoVisible] = useState(false);
@@ -290,26 +328,35 @@ export default function Home({ onNavigate }: HomeProps) {
           </AnimateOnScroll>
 
           <AnimateOnScroll direction="right" className="flex flex-col gap-4">
-            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <img src="/Search.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-              <div>
-                <h3 className="text-[15px] font-semibold text-white">Find what's good</h3>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <img src="/Calender.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-              <div>
-                <h3 className="text-[15px] font-semibold text-white">Book in seconds</h3>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <img src="/Running.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-              <div>
-                <h3 className="text-[15px] font-semibold text-white">Try anything</h3>
-              </div>
-            </div>
+            {PLAYERS_CARDS.map((card, index) => {
+              const isOpen = openPlayerCard === index;
+              return (
+                <div
+                  key={index}
+                  onClick={() => setOpenPlayerCard(isOpen ? null : index)}
+                  className="flex items-start gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] cursor-pointer transition-colors hover:bg-black"
+                >
+                  <img src={card.icon} alt="" className="h-16 w-16 shrink-0 object-contain" />
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between h-16">
+                      <h3 className="text-[20px] font-semibold text-white">{card.title}</h3>
+                      <svg
+                        className={`h-4 w-4 shrink-0 text-white/60 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </div>
+                    {isOpen && (
+                      <p className="pb-2 pr-4 text-[15px] text-white/50 leading-relaxed">{card.desc}</p>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </AnimateOnScroll>
         </div>
       </section>
@@ -355,29 +402,35 @@ export default function Home({ onNavigate }: HomeProps) {
           </AnimateOnScroll>
 
           <AnimateOnScroll direction="right" className="flex flex-col gap-4">
-            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <img src="/Discover.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-              <div>
-                <h3 className="text-[15px] font-semibold text-white">Discover Your Next Favorite Spot</h3>
-                <p className="mt-1 text-[13px] text-white/50">Your venue appears in search results for thousands of people looking for sports & wellness experiences near them. More visibility means more bookings — without spending on ads.</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <img src="/Clock.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-              <div>
-                <h3 className="text-[15px] font-semibold text-white">Automate Your Operations</h3>
-                <p className="mt-1 text-[13px] text-white/50">Accept bookings 24/7, manage time slots, handle cancellations, and track payments — all from one app. No more phone calls, WhatsApp chaos, or manual registers.</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-              <img src="/Heart.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-              <div>
-                <h3 className="text-[15px] font-semibold text-white">Build Community Loyalty</h3>
-                <p className="mt-1 text-[13px] text-white/50">Deliver consistent quality experiences backed by user reviews and ratings. Happy members return, recommend, and bring their circles. That's sustainable growth.</p>
-              </div>
-            </div>
+            {VENUE_CARDS.map((card, index) => {
+              const isOpen = openVenueCard === index;
+              return (
+                <div
+                  key={index}
+                  onClick={() => setOpenVenueCard(isOpen ? null : index)}
+                  className="flex items-start gap-4 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] cursor-pointer transition-colors hover:bg-black"
+                >
+                  <img src={card.icon} alt="" className="h-16 w-16 shrink-0 object-contain" />
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between h-16">
+                      <h3 className="text-[20px] font-semibold text-white">{card.title}</h3>
+                      <svg
+                        className={`h-4 w-4 shrink-0 text-white/60 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </div>
+                    {isOpen && (
+                      <p className="pb-2 pr-4 text-[15px] text-white/50 leading-relaxed">{card.desc}</p>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </AnimateOnScroll>
         </div>
       </section>

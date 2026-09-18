@@ -162,8 +162,10 @@ export default function Support() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-[#0F0F0F] px-4 pb-24 pt-32 text-white sm:px-6">
-      {/* Standard CSS injection for keyframes and scroll optimization */}
+    <div className="w-full bg-[#0F0F0F] text-white">
+      {/* Top section with Grid */}
+      <div className="relative w-full overflow-hidden px-4 pt-32 pb-1 sm:px-6">
+        {/* Standard CSS injection for keyframes and scroll optimization */}
       <style>{`
         @keyframes backInLeft {
           0% {
@@ -327,9 +329,13 @@ export default function Support() {
           </AnimateOnScroll>
 
         </div>
+      </div>
+      </div>
 
+      {/* Bottom section (Contact Form) without Grid */}
+      <div className="relative mx-auto max-w-6xl px-4 pb-24 sm:px-6">
         {/* Contact Form Section */}
-        <div id="contact" className="scroll-section mt-28 grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+        <div id="contact" className="scroll-section mt-12 grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <AnimateOnScroll direction="left">
             <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl leading-[1.1]">
               Got a Question? <br />
@@ -416,7 +422,11 @@ function SupportGrid() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 opacity-70 [background-image:linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:72px_72px]"
+      className="pointer-events-none absolute inset-0 opacity-100"
+      style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='72' height='72' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0v72' stroke='rgba(255, 255, 255, 0.1)' stroke-width='1' stroke-dasharray='4 6' fill='none'/%3E%3C/svg%3E")`,
+        backgroundSize: "72px 72px",
+      }}
     />
   );
 }
@@ -424,9 +434,8 @@ function SupportGrid() {
 function ChevronDown({ open }: { open: boolean }) {
   return (
     <svg
-      className={`h-4 w-4 shrink-0 text-white/60 transition-transform duration-200 ${
-        open ? "rotate-180" : ""
-      }`}
+      className={`h-4 w-4 shrink-0 text-white/60 transition-transform duration-200 ${open ? "rotate-180" : ""
+        }`}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"

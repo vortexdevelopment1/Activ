@@ -259,8 +259,9 @@ export default function VenuePartnersv() {
 
       {/* 3. Step 01: Create Your Partner Account */}
       <section className="scroll-section relative px-4 py-20 sm:px-6 sm:py-28 border-t border-white/5 overflow-hidden">
+        <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-transparent to-white/15 z-0" />
         <SectionGrid />
-        <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-12 items-center">
+        <div className="relative mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-12 items-center z-10">
           <AnimateOnScroll direction="left">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c8f31d]/30 bg-[#c8f31d]/10 px-3.5 py-1 backdrop-blur-sm">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#c8f31d]">
@@ -277,11 +278,9 @@ export default function VenuePartnersv() {
           </AnimateOnScroll>
 
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
-            <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
-            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
+            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)] relative z-10">
               <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">01</span>
             </div>
-            <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
           </div>
 
           <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
@@ -304,8 +303,9 @@ export default function VenuePartnersv() {
 
       {/* 4. Step 02: Showcase What Your Venue Offers */}
       <section className="scroll-section relative px-4 py-20 sm:px-6 sm:py-28 border-t border-white/5 overflow-hidden">
+        <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-white/15 z-0" />
         <SectionGrid />
-        <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-12 items-center">
+        <div className="relative mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-12 items-center z-10">
           <AnimateOnScroll direction="left">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c8f31d]/30 bg-[#c8f31d]/10 px-3.5 py-1 backdrop-blur-sm">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#c8f31d]">
@@ -322,11 +322,9 @@ export default function VenuePartnersv() {
           </AnimateOnScroll>
 
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
-            <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
-            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
+            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)] relative z-10">
               <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">02</span>
             </div>
-            <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
           </div>
 
           <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
@@ -350,8 +348,9 @@ export default function VenuePartnersv() {
 
       {/* 5. Step 03: Quality Venues Build Trust */}
       <section className="scroll-section relative px-4 py-20 sm:px-6 sm:py-28 border-t border-white/5 overflow-hidden">
+        <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-white/15 z-0" />
         <SectionGrid />
-        <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-12 items-center">
+        <div className="relative mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-12 items-center z-10">
           <AnimateOnScroll direction="left">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c8f31d]/30 bg-[#c8f31d]/10 px-3.5 py-1 backdrop-blur-sm">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#c8f31d]">
@@ -368,11 +367,9 @@ export default function VenuePartnersv() {
           </AnimateOnScroll>
 
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
-            <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
-            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
+            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)] relative z-10">
               <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">03</span>
             </div>
-            <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
           </div>
 
           <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
@@ -395,8 +392,9 @@ export default function VenuePartnersv() {
 
       {/* 6. Step 04: Start Receiving Bookings & Earn */}
       <section className="scroll-section relative px-4 py-20 sm:px-6 sm:py-28 border-t border-white/5 overflow-hidden">
+        <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-gradient-to-t from-transparent to-white/15 z-0" />
         <SectionGrid />
-        <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-12 items-center">
+        <div className="relative mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-12 items-center z-10">
           <AnimateOnScroll direction="left">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c8f31d]/30 bg-[#c8f31d]/10 px-3.5 py-1 backdrop-blur-sm">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#c8f31d]">
@@ -413,11 +411,9 @@ export default function VenuePartnersv() {
           </AnimateOnScroll>
 
           <div className="hidden lg:flex flex-col items-center justify-center h-full">
-            <div className="w-px flex-1 bg-gradient-to-b from-transparent to-white/15" />
-            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)]">
+            <div className="flex h-14 w-14 shrink-0 rotate-45 items-center justify-center rounded-md border border-[#c8f31d]/40 bg-[#202615] shadow-[0_0_15px_rgba(200,243,29,0.15)] relative z-10">
               <span className="-rotate-45 text-[20px] font-bold text-[#c8f31d]">04</span>
             </div>
-            <div className="w-px flex-1 bg-gradient-to-t from-transparent to-white/15" />
           </div>
 
           <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
@@ -489,7 +485,7 @@ function SectionGrid() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 opacity-70 [background-image:linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:72px_72px]"
+      className="pointer-events-none absolute inset-0 opacity-100 [background-image:linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:72px_72px]"
     />
   );
 }
