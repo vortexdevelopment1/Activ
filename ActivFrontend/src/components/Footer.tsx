@@ -49,7 +49,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div>
             <button
               onClick={() => onNavigate("home")}
-              className="flex items-center bg-transparent border-none cursor-pointer text-left sm:ml-[10px]"
+              className="flex items-center bg-transparent border-none cursor-pointer text-left xl:ml-[10px]"
               aria-label="ACTIV home"
             >
               <img
@@ -58,12 +58,12 @@ export default function Footer({ onNavigate }: FooterProps) {
                 className="h-[52px] w-[124px] object-contain"
               />
             </button>
-            <p className="mt-3 max-w-[400px] text-[20px] leading-relaxed text-white/80 sm:ml-3">
+            <p className="mt-3 max-w-[400px] text-[20px] leading-relaxed text-white/80 xl:ml-3">
               Empowering people to move, helping venues thrive, and building
               healthier communities together.
             </p>
 
-            <div className="mt-5 flex flex-wrap sm:ml-[-5px]">
+            <div className="mt-5 flex flex-wrap xl:ml-[-5px]">
               <a
                 href="https://play.google.com/store/apps/details?id=com.activ.partnerapp"
                 target="_blank"
@@ -87,7 +87,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Community column */}
           <div>
-            <h3 className="text-[22px] font-semibold text-white sm:ml-[20px]">Community</h3>
+            <h3 className="text-[22px] font-semibold text-white xl:ml-[20px]">Community</h3>
             <ul className="mt-4 space-y-3">
               {COMMUNITY_LINKS.map((link) => (
                 <li key={link.label}>
@@ -95,9 +95,9 @@ export default function Footer({ onNavigate }: FooterProps) {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-[18px] text-white/60 transition-colors hover:text-white sm:ml-[10px]"
+                    className="inline-flex items-center gap-2 text-[18px] text-white/60 transition-colors hover:text-white xl:ml-[10px]"
                   >
-                    <span aria-hidden="true" className="brightness-150 saturate-150 drop-shadow-md sm:ml-[10px]">{link.emoji}</span>
+                    <span aria-hidden="true" className="brightness-150 saturate-150 drop-shadow-md xl:ml-[10px]">{link.emoji}</span>
                     {link.label}
                   </a>
                 </li>
@@ -107,7 +107,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Support column */}
           <div>
-            <h3 className="text-[22px] font-semibold text-white sm:ml-[100px]">Support</h3>
+            <h3 className="text-[22px] font-semibold text-white xl:ml-[100px]">Support</h3>
             <ul className="mt-4 space-y-3">
               {SUPPORT_LINKS.map((link) => (
                 <li key={link.label}>
@@ -128,7 +128,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                         onNavigate("terms");
                       }
                     }}
-                    className="text-[18px] text-white/60 transition-colors hover:text-white sm:ml-[100px]"
+                    className="text-[18px] text-white/60 transition-colors hover:text-white xl:ml-[100px]"
                   >
                     {link.label}
                   </a>
@@ -136,10 +136,10 @@ export default function Footer({ onNavigate }: FooterProps) {
               ))}
             </ul>
 
-            <p className="mt-6 text-[18px] text-white/60 sm:ml-[100px]">Get in touch</p>
+            <p className="mt-6 text-[18px] text-white/60 xl:ml-[100px]">Get in touch</p>
             <a
               href="mailto:Support@activ.live"
-              className="text-[15px] font-medium text-[#c8f31d] hover:underline sm:ml-[100px]"
+              className="text-[15px] font-medium text-[#c8f31d] hover:underline xl:ml-[100px]"
             >
               Support@activ.live
             </a>

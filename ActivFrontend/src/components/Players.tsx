@@ -443,7 +443,7 @@ export default function Players() {
             <img
               src="/players/mocks(1).png"
               alt="ACTIV app booking successful screen"
-              className="relative z-10 w-full max-w-[450px] scale-[1.15] sm:scale-100 h-auto rounded-[36px] object-contain"
+              className="relative z-10 w-full max-w-[450px] scale-[1.12] sm:scale-100 h-auto rounded-[36px] object-contain"
             />
           </AnimateOnScroll>
         </div>
