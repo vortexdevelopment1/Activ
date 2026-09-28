@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import Loader from "./Loader";
 
 // Wraps a block and plays backInLeft/backInRight the moment it scrolls into view.
 // Animation only fires once (per element) the first time it enters the viewport.
@@ -54,10 +55,18 @@ const venuePartnerImageUrl = (fileName: string) =>
   `/venuepartners/${encodeURIComponent(fileName)}`;
 
 export default function VenuePartnersv() {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current && videoRef.current.readyState >= 3) {
+      setIsVideoLoaded(true);
+    }
+  }, []);
 
   return (
     <div id="venue-partners" className="bg-[#0F0F0F] text-white w-full overflow-hidden">
+      {!isVideoLoaded && <Loader />}
       {/* Standard CSS injection for keyframes and scroll optimization */}
       <style>{`
         @keyframes backInLeft {
@@ -110,6 +119,7 @@ export default function VenuePartnersv() {
             playsInline
             preload="auto"
             tabIndex={-1}
+            onLoadedData={() => setIsVideoLoaded(true)}
           />
         </div>
         {/* Transparent shield overlay to block any native click interactions on the video */}

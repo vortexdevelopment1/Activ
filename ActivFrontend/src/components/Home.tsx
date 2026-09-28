@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import Loader from "./Loader";
 
 interface HomeProps {
   onNavigate: (sectionId: string) => void;
@@ -91,10 +92,18 @@ const VENUE_CARDS = [
 export default function Home({ onNavigate }: HomeProps) {
   const [openPlayerCard, setOpenPlayerCard] = useState<number | null>(null);
   const [openVenueCard, setOpenVenueCard] = useState<number | null>(null);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current && videoRef.current.readyState >= 3) {
+      setIsVideoLoaded(true);
+    }
+  }, []);
 
   return (
     <>
+      {!isVideoLoaded && <Loader />}
       {/* Standard CSS injection for keyframes and scroll optimization */}
       <style>{`
         @keyframes backInLeft {
@@ -150,6 +159,7 @@ export default function Home({ onNavigate }: HomeProps) {
             playsInline
             preload="auto"
             tabIndex={-1}
+            onLoadedData={() => setIsVideoLoaded(true)}
           />
         </div>
         {/* Transparent shield overlay to block any native click interactions on the video */}
