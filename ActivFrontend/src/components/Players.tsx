@@ -336,7 +336,7 @@ export default function Players() {
           </div>
 
           <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
-            <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0 -translate-y-12 sm:-translate-y-12 scale-[0.90] sm:scale-100 origin-bottom">
+            <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0 -translate-y-4 sm:-translate-y-12 scale-[0.95] sm:scale-100 origin-bottom">
               <div className="w-[75px] h-[370px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/10 absolute bottom-10" />
               <div className="w-[120px] h-[400px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/15 absolute bottom-10" />
               <div className="w-[165px] h-[430px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/20 absolute bottom-10" />
@@ -350,7 +350,7 @@ export default function Players() {
               <img
                 src="/players/mocks.png"
                 alt="ACTIV app showing nearby venues list"
-                className="relative z-10 w-full max-w-[450px] h-auto rounded-[36px] object-contain"
+                className="relative z-10 w-full max-w-[450px] scale-[1.15] sm:scale-100 h-auto rounded-[36px] object-contain"
               />
             </div>
           </AnimateOnScroll>
@@ -430,7 +430,7 @@ export default function Players() {
           </div>
 
           <AnimateOnScroll direction="right" className="flex justify-center relative py-10 mt-16 lg:mt-0">
-            <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0 -translate-y-12 sm:-translate-y-12 scale-[0.90] sm:scale-100 origin-bottom">
+            <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0 -translate-y-8 sm:-translate-y-12 scale-[0.90] sm:scale-100 origin-bottom">
               <div className="w-[75px] h-[320px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/10 absolute bottom-10" />
               <div className="w-[120px] h-[350px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/15 absolute bottom-10" />
               <div className="w-[165px] h-[385px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/20 absolute bottom-10" />
@@ -443,7 +443,7 @@ export default function Players() {
             <img
               src="/players/mocks(1).png"
               alt="ACTIV app booking successful screen"
-              className="relative z-10 w-full max-w-[450px] h-auto rounded-[36px] object-contain"
+              className="relative z-10 w-full max-w-[450px] scale-[1.15] sm:scale-100 h-auto rounded-[36px] object-contain"
             />
           </AnimateOnScroll>
         </div>
