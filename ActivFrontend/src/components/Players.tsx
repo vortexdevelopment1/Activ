@@ -350,7 +350,7 @@ export default function Players() {
               <img
                 src="/players/mocks.png"
                 alt="ACTIV app showing nearby venues list"
-                className="relative z-10 w-full max-w-[450px] scale-[1.10] sm:scale-100 h-auto rounded-[36px] object-contain"
+                className="relative z-10 w-full max-w-[450px] scale-[1.09] sm:scale-100 h-auto rounded-[36px] object-contain"
               />
             </div>
           </AnimateOnScroll>
@@ -443,7 +443,7 @@ export default function Players() {
             <img
               src="/players/mocks(1).png"
               alt="ACTIV app booking successful screen"
-              className="relative z-10 w-full max-w-[450px] scale-[1.12] sm:scale-100 h-auto rounded-[36px] object-contain"
+              className="relative z-10 w-full max-w-[450px] scale-[1.09] sm:scale-100 h-auto rounded-[36px] object-contain"
             />
           </AnimateOnScroll>
         </div>
