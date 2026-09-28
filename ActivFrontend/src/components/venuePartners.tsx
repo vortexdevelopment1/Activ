@@ -54,6 +54,10 @@ const venuePartnerImageUrl = (fileName: string) =>
   `/venuepartners/${encodeURIComponent(fileName)}`;
 
 export default function VenuePartnersv() {
+  const cloudinaryCloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+  const videoSrc = cloudinaryCloudName 
+    ? `https://res.cloudinary.com/${cloudinaryCloudName}/video/upload/f_auto,q_auto/Venuepartner.mp4` 
+    : "/Venuepartner.mp4";
   return (
     <div id="venue-partners" className="bg-[#0F0F0F] text-white w-full overflow-hidden">
       {/* Standard CSS injection for keyframes and scroll optimization */}
@@ -100,7 +104,7 @@ export default function VenuePartnersv() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <video
             className="absolute inset-0 h-full w-full object-cover"
-            src="/Venuepartner.mp4"
+            src={videoSrc}
             autoPlay
             muted
             loop
@@ -141,6 +145,8 @@ export default function VenuePartnersv() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="https://apps.apple.com/in/app/activ-partner/id6793596032"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 rounded-[13px] bg-black px-5 py-3 text-sm font-semibold text-white transition-transform hover:scale-[1.02] border border-[#c8f31d]/70 shadow-[0_0_15px_rgba(200,243,29,0.2)]"
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#c8f31d] text-black">
@@ -150,6 +156,8 @@ export default function VenuePartnersv() {
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=com.activ.partnerapp"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 rounded-[13px] bg-black px-5 py-3 text-sm font-semibold text-white transition-transform hover:scale-[1.02] border border-[#c8f31d]/70 shadow-[0_0_15px_rgba(200,243,29,0.2)]"
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#c8f31d] text-black">
@@ -408,6 +416,8 @@ export default function VenuePartnersv() {
           <div className="mt-10 flex flex-col sm:flex-row w-full max-w-md sm:max-w-none justify-center gap-3 sm:gap-4">
             <a
               href="https://apps.apple.com/in/app/activ-partner/id6793596032"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex w-full sm:w-auto min-w-[200px] h-[50px] items-center justify-center gap-2 rounded-xl sm:rounded-sm bg-white px-5 py-2 text-sm font-semibold text-black transition-colors hover:bg-[#c8f31d]"
             >
               <img src="/venuepartners/apple_svgrepo.com.png" alt="Apple logo" className="w-5 h-5" />
@@ -415,6 +425,8 @@ export default function VenuePartnersv() {
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=com.activ.partnerapp"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex w-full sm:w-auto min-w-[200px] h-[50px] items-center justify-center gap-2 rounded-xl sm:rounded-sm bg-white px-5 py-2 text-sm font-semibold text-black transition-colors hover:bg-[#c8f31d]"
             >
               <img src="/venuepartners/android_svgrepo.com.png" alt="Google Play logo" className="w-5 h-5" />

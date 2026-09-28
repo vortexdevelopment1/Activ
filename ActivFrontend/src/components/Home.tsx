@@ -92,6 +92,11 @@ export default function Home({ onNavigate }: HomeProps) {
   const [openPlayerCard, setOpenPlayerCard] = useState<number | null>(null);
   const [openVenueCard, setOpenVenueCard] = useState<number | null>(null);
 
+  const cloudinaryCloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+  const videoSrc = cloudinaryCloudName 
+    ? `https://res.cloudinary.com/${cloudinaryCloudName}/video/upload/f_auto,q_auto/Home.mp4` 
+    : "/Home.mp4";
+
   return (
     <>
       {/* Standard CSS injection for keyframes and scroll optimization */}
@@ -141,7 +146,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <video
             className="absolute inset-0 h-full w-full object-cover"
-            src="/Home.mp4"
+            src={videoSrc}
             autoPlay
             muted
             loop

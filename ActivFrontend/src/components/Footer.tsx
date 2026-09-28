@@ -66,6 +66,8 @@ export default function Footer({ onNavigate }: FooterProps) {
             <div className="mt-5 flex flex-wrap sm:ml-[-5px]">
               <a
                 href="https://play.google.com/store/apps/details?id=com.activ.partnerapp"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transition-opacity hover:opacity-80 inline-block"
                 aria-label="Get it on Google Play"
               >
@@ -73,6 +75,8 @@ export default function Footer({ onNavigate }: FooterProps) {
               </a>
               <a
                 href="https://apps.apple.com/in/app/activ-partner/id6793596032"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transition-opacity hover:opacity-80 inline-block"
                 aria-label="Download on the App Store"
               >
@@ -89,6 +93,8 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <li key={link.label}>
                   <a
                     href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-[18px] text-white/60 transition-colors hover:text-white sm:ml-[10px]"
                   >
                     <span aria-hidden="true" className="brightness-150 saturate-150 drop-shadow-md sm:ml-[10px]">{link.emoji}</span>
@@ -108,15 +114,19 @@ export default function Footer({ onNavigate }: FooterProps) {
                   <a
                     href={link.href}
                     onClick={(event) => {
-                      if (link.label !== "Contact us") return;
-
                       event.preventDefault();
-                      onNavigate("support");
-                      requestAnimationFrame(() => {
-                        document.getElementById("contact")?.scrollIntoView({
-                          behavior: "smooth",
+                      if (link.label === "Contact us") {
+                        onNavigate("support");
+                        requestAnimationFrame(() => {
+                          document.getElementById("contact")?.scrollIntoView({
+                            behavior: "smooth",
+                          });
                         });
-                      });
+                      } else if (link.label === "Privacy policy") {
+                        onNavigate("privacy-policy");
+                      } else if (link.label === "Terms of service") {
+                        onNavigate("terms");
+                      }
                     }}
                     className="text-[18px] text-white/60 transition-colors hover:text-white sm:ml-[100px]"
                   >
@@ -146,6 +156,8 @@ export default function Footer({ onNavigate }: FooterProps) {
               <a
                 key={label}
                 href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="text-white/70 transition-colors hover:text-white"
               >
