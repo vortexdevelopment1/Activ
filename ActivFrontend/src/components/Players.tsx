@@ -76,7 +76,7 @@ export default function Players() {
 
   const cloudinaryCloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
   const videoSrc = cloudinaryCloudName 
-    ? `https://res.cloudinary.com/${cloudinaryCloudName}/video/upload/f_auto,q_auto/Players.mp4` 
+    ? `https://res.cloudinary.com/${cloudinaryCloudName}/video/upload/f_auto,q_auto/Players.mp4.mp4` 
     : "/Players.mp4";
 
   return (

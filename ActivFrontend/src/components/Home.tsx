@@ -94,7 +94,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
   const cloudinaryCloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
   const videoSrc = cloudinaryCloudName 
-    ? `https://res.cloudinary.com/${cloudinaryCloudName}/video/upload/f_auto,q_auto/Home.mp4` 
+    ? `https://res.cloudinary.com/${cloudinaryCloudName}/video/upload/f_auto,q_auto/Home.mp4.mp4` 
     : "/Home.mp4";
 
   return (

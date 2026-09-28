@@ -56,7 +56,7 @@ const venuePartnerImageUrl = (fileName: string) =>
 export default function VenuePartnersv() {
   const cloudinaryCloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
   const videoSrc = cloudinaryCloudName 
-    ? `https://res.cloudinary.com/${cloudinaryCloudName}/video/upload/f_auto,q_auto/Venuepartner.mp4` 
+    ? `https://res.cloudinary.com/${cloudinaryCloudName}/video/upload/f_auto,q_auto/Venuepartner.mp4.mp4` 
     : "/Venuepartner.mp4";
   return (
     <div id="venue-partners" className="bg-[#0F0F0F] text-white w-full overflow-hidden">
