@@ -385,7 +385,7 @@ export default function Players() {
           </div>
 
           <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
-            <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0 -translate-y-6 sm:-translate-y-8 scale-[0.80] sm:scale-100 origin-bottom">
+            <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0 -translate-y-3 sm:-translate-y-12 scale-[1.00] sm:scale-100 origin-bottom">
               <div className="w-[220px] h-[420px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/10 absolute bottom-10" />
               <div className="w-[260px] h-[470px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/25 absolute bottom-10" />
               <div className="w-[305px] h-[565px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/25 absolute bottom-10" />
