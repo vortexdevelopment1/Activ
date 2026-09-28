@@ -350,7 +350,7 @@ export default function Players() {
               <img
                 src="/players/mocks.png"
                 alt="ACTIV app showing nearby venues list"
-                className="relative z-10 w-full max-w-[450px] scale-[1.15] sm:scale-100 h-auto rounded-[36px] object-contain"
+                className="relative z-10 w-full max-w-[450px] scale-[1.10] sm:scale-100 h-auto rounded-[36px] object-contain"
               />
             </div>
           </AnimateOnScroll>
