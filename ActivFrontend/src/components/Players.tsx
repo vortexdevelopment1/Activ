@@ -73,15 +73,7 @@ const CARDS_DATA = [
 
 export default function Players() {
   const [openCardIndex, setOpenCardIndex] = useState<number | null>(null);
-  // Video should be fully visible as soon as it can actually play, with a
-  // short fallback timer so the poster/black background never lingers past ~1s.
-  const [videoVisible, setVideoVisible] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setVideoVisible(true), 1000);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div id="players" className="bg-[#0F0F0F] text-white w-full overflow-hidden">
@@ -126,10 +118,7 @@ export default function Players() {
       {/* 1. Hero Section */}
       <section className="relative flex min-h-[640px] w-full items-end overflow-hidden sm:min-h-[730px]">
         {/* Background video with overlay */}
-        <div
-          className={`absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-700 ease-out ${videoVisible ? "opacity-100" : "opacity-0"
-            }`}
-        >
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <video
             ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover"
@@ -140,7 +129,6 @@ export default function Players() {
             playsInline
             preload="auto"
             tabIndex={-1}
-            onLoadedData={() => setVideoVisible(true)}
           />
         </div>
         {/* Transparent shield overlay to block any native click interactions on the video */}

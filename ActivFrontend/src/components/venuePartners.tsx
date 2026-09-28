@@ -54,15 +54,7 @@ const venuePartnerImageUrl = (fileName: string) =>
   `/venuepartners/${encodeURIComponent(fileName)}`;
 
 export default function VenuePartnersv() {
-  // Video should be fully visible as soon as it can actually play, with a
-  // short fallback timer so the poster/black background never lingers past ~1s.
-  const [videoVisible, setVideoVisible] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setVideoVisible(true), 1000);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div id="venue-partners" className="bg-[#0F0F0F] text-white w-full overflow-hidden">
@@ -107,10 +99,7 @@ export default function VenuePartnersv() {
       {/* 1. Hero Section */}
       <section className="relative flex min-h-[640px] w-full items-end overflow-hidden sm:min-h-[730px]">
         {/* Background video with overlay */}
-        <div
-          className={`absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-700 ease-out ${videoVisible ? "opacity-100" : "opacity-0"
-            }`}
-        >
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <video
             ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover"
@@ -121,7 +110,6 @@ export default function VenuePartnersv() {
             playsInline
             preload="auto"
             tabIndex={-1}
-            onLoadedData={() => setVideoVisible(true)}
           />
         </div>
         {/* Transparent shield overlay to block any native click interactions on the video */}
@@ -488,27 +476,16 @@ function GooglePlayIcon() {
 
 function FeatureCard({ icon, title, text }: { icon: string; title: string; text: string }) {
   return (
-    <div 
-      className="group relative flex h-full min-h-[300px] flex-col justify-start rounded-[24px] border border-[#1D1D1D] bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] overflow-hidden cursor-pointer transition-all duration-700 hover:border-white/20"
-    >
-      <img src={icon} alt="" className="h-14 w-14 shrink-0 object-contain" />
-      <div className="absolute top-6 right-6 pointer-events-none">
-        <img src="/venuepartners/Union.png" alt="" className="w-8 h-8 object-contain opacity-20 transition-opacity duration-700 group-hover:opacity-60" />
+    <div className="relative flex h-full flex-col justify-start gap-8 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] text-left">
+      <img src={icon} alt="" className="h-16 w-16 shrink-0 object-contain" />
+      <div className="absolute top-5 right-0 pointer-events-none">
+        <img src="/players/Union.png" alt="" className="w-19 h-19 object-contain" />
       </div>
-      
-      <div className="flex flex-col flex-1 transition-all duration-700 mt-[80px] group-hover:mt-6">
-        <h3 className="font-bold tracking-tight text-[#c8f31d] transition-all duration-700 text-xl sm:text-2xl group-hover:text-[24px]">
-          {title}
-        </h3>
-        
-        <div className="grid transition-all duration-700 ease-in-out grid-rows-[0fr] opacity-0 mt-0 group-hover:grid-rows-[1fr] group-hover:opacity-100 group-hover:mt-4">
-          <div className="overflow-hidden">
-            <hr className="mb-4 border-[#333]" />
-            <p className="text-sm text-white/80 leading-relaxed">
-              {text}
-            </p>
-          </div>
-        </div>
+      <div className="flex flex-col flex-1">
+        <h3 className="text-lg font-semibold text-white min-h-[56px]">{title}</h3>
+        <p className="mt-2 text-sm text-white/60 leading-relaxed">
+          {text}
+        </p>
       </div>
     </div>
   );
