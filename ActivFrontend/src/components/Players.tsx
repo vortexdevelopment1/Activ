@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import Loader from "./Loader";
 
 function AnimateOnScroll({
   direction,
@@ -74,18 +73,9 @@ const CARDS_DATA = [
 
 export default function Players() {
   const [openCardIndex, setOpenCardIndex] = useState<number | null>(null);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current && videoRef.current.readyState >= 3) {
-      setIsVideoLoaded(true);
-    }
-  }, []);
 
   return (
     <div id="players" className="bg-[#0F0F0F] text-white w-full overflow-hidden">
-      {!isVideoLoaded && <Loader />}
       {/* Standard CSS injection for keyframes and scroll optimization */}
       <style>{`
         @keyframes backInLeft {
@@ -129,7 +119,6 @@ export default function Players() {
         {/* Background video with overlay */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <video
-            ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover"
             src="/Players.mp4"
             autoPlay
@@ -138,7 +127,6 @@ export default function Players() {
             playsInline
             preload="auto"
             tabIndex={-1}
-            onLoadedData={() => setIsVideoLoaded(true)}
           />
         </div>
         {/* Transparent shield overlay to block any native click interactions on the video */}
