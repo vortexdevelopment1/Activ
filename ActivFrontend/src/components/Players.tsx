@@ -75,8 +75,8 @@ export default function Players() {
   const [openCardIndex, setOpenCardIndex] = useState<number | null>(null);
 
   const cloudinaryCloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
-  const videoSrc = cloudinaryCloudName 
-    ? `https://res.cloudinary.com/${cloudinaryCloudName}/video/upload/f_auto,q_auto/Players.mp4.mp4` 
+  const videoSrc = cloudinaryCloudName
+    ? `https://res.cloudinary.com/${cloudinaryCloudName}/video/upload/f_auto,q_auto/Players.mp4.mp4`
     : "/Players.mp4";
 
   return (
@@ -278,7 +278,7 @@ export default function Players() {
               From "I should" <br />
               to <span className="text-[#c8f31d]">"I'm there"</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg  w-[490px]">
+            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-full max-w-[490px]">
               Start with what you want to do. Choose the activity that fits your mood, your schedule, or your energy. From football and badminton to gyms, wellness and more — ACTIV helps you find it.
             </p>
           </AnimateOnScroll>
@@ -323,7 +323,7 @@ export default function Players() {
               Find what's <br />
               <span className="text-[#c8f31d]">Near You</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg  w-[480px]">
+            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-full max-w-[480px]">
               Open ACTIV and explore verified venues near you. Browse by sport, activity, or what's available now. Compare your options, check the details, and find a place that fits what you're looking for.
             </p>
           </AnimateOnScroll>
@@ -336,7 +336,7 @@ export default function Players() {
           </div>
 
           <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
-            <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0">
+            <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0 -translate-y-12 sm:-translate-y-12 scale-[0.90] sm:scale-100 origin-bottom">
               <div className="w-[75px] h-[370px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/10 absolute bottom-10" />
               <div className="w-[120px] h-[400px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/15 absolute bottom-10" />
               <div className="w-[165px] h-[430px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/20 absolute bottom-10" />
@@ -417,7 +417,7 @@ export default function Players() {
               Walk in <br />
               <span className="text-[#c8f31d]">Expected</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-[530px]">
+            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-full max-w-[530px]">
               No reception confusion, no "are you the 6 pm booking?" The venue knows your name and your slot before you arrive. Every session gets logged, so the streak builds itself.
             </p>
           </AnimateOnScroll>
@@ -429,8 +429,8 @@ export default function Players() {
             </div>
           </div>
 
-          <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
-            <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0">
+          <AnimateOnScroll direction="right" className="flex justify-center relative py-10 mt-16 lg:mt-0">
+            <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0 -translate-y-12 sm:-translate-y-12 scale-[0.90] sm:scale-100 origin-bottom">
               <div className="w-[75px] h-[320px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/10 absolute bottom-10" />
               <div className="w-[120px] h-[350px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/15 absolute bottom-10" />
               <div className="w-[165px] h-[385px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/20 absolute bottom-10" />

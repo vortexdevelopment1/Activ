@@ -55,8 +55,8 @@ const venuePartnerImageUrl = (fileName: string) =>
 
 export default function VenuePartnersv() {
   const cloudinaryCloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
-  const videoSrc = cloudinaryCloudName 
-    ? `https://res.cloudinary.com/${cloudinaryCloudName}/video/upload/f_auto,q_auto/Venuepartner.mp4.mp4` 
+  const videoSrc = cloudinaryCloudName
+    ? `https://res.cloudinary.com/${cloudinaryCloudName}/video/upload/f_auto,q_auto/Venuepartner.mp4.mp4`
     : "/Venuepartner.mp4";
   return (
     <div id="venue-partners" className="bg-[#0F0F0F] text-white w-full overflow-hidden">
@@ -188,22 +188,22 @@ export default function VenuePartnersv() {
         </AnimateOnScroll>
 
         <AnimateOnScroll direction="right" className="mx-auto max-w-6xl mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-          <FeatureCard 
+          <FeatureCard
             icon="/eye.png"
             title="Get Discovered Faster"
             text="Reach every player searching for a venue in your area, without depending on Instagram, word of mouth or hoping someone tags you in a story."
           />
-          <FeatureCard 
+          <FeatureCard
             icon="/calender1.png"
             title="Bookings without the back-and-forth"
             text="24/7 bookings on a calendar that prevents double-booking and gives you full control over slots, pricing and availability across every court you run."
           />
-          <FeatureCard 
+          <FeatureCard
             icon="/Setting.png"
             title="Payments that don't go missing"
             text="Money flows in cleanly, with statements your accountant can read. See exactly where revenue is coming from, slot by slot."
           />
-          <FeatureCard 
+          <FeatureCard
             icon="/Bulb.png"
             title="A real human, not a ticket queue"
             text="Real partner support on the other end of the line. We help you set up, get listed and clear blockers fast, because nobody's growing while waiting on a support ticket."
@@ -226,7 +226,7 @@ export default function VenuePartnersv() {
               Create Your <br />
               <span className="text-[#c8f31d]">Partner Account</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-[515px]">
+            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-full max-w-[515px]">
               Download the ACTIV Partner app and create your account in minutes. Add your contact details and primary venue information, and you're onboarded. No paperwork, no complicated setup, no waiting around for someone to call you back.
             </p>
           </AnimateOnScroll>
@@ -270,7 +270,7 @@ export default function VenuePartnersv() {
               Showcase What <br />
               <span className="text-[#c8f31d]">Your Venue Offers</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-[430px]">
+            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-full max-w-[430px]">
               Add your venue details, location, activities, photos and amenities, so players see exactly what they're booking before they show up. The more they see, the faster they decide.
             </p>
           </AnimateOnScroll>
@@ -281,7 +281,7 @@ export default function VenuePartnersv() {
             </div>
           </div>
 
-          <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
+          <AnimateOnScroll direction="right" className="flex justify-center relative py-10 -mx-4 sm:mx-0">
             <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0">
               <div className="w-[75px] h-[330px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/10 absolute bottom-10" />
               <div className="w-[120px] h-[350px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/15 absolute bottom-10" />
@@ -315,7 +315,7 @@ export default function VenuePartnersv() {
               Quality Venues <br />
               <span className="text-[#c8f31d]">Build Trust</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-[450px]">
+            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-full max-w-[450px]">
               Submit your venue documents and business details for verification. Our team reviews every listing before it goes live, which keeps the standard high and the platform trustworthy. Once approved, your venue is discoverable to every nearby player ready to book.
             </p>
           </AnimateOnScroll>
@@ -370,7 +370,7 @@ export default function VenuePartnersv() {
             </div>
           </div>
 
-          <AnimateOnScroll direction="right" className="flex justify-center relative py-10">
+          <AnimateOnScroll direction="right" className="flex justify-center relative py-10 -mx-4 sm:mx-0">
             <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0">
               <div className="w-[75px] h-[340px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/10 absolute bottom-10" />
               <div className="w-[120px] h-[370px] rounded-t-full border-t-4 border-l-4 border-r-4 border-b-0 border-[#c8f31d]/15 absolute bottom-10" />
