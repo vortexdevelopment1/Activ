@@ -58,6 +58,32 @@ export default function VenuePartnersv() {
   const videoSrc = cloudinaryCloudName
     ? `https://res.cloudinary.com/${cloudinaryCloudName}/video/upload/f_auto,q_auto/Venuepartner.mp4.mp4`
     : "/Venuepartner.mp4";
+
+  const [activeFeature, setActiveFeature] = useState(0);
+
+  const features = [
+    {
+      icon: "/eye.png",
+      title: "Get Discovered Faster",
+      text: "Get discovered by thousands of players actively searching for sports facilities in your area. More visibility, more bookings — without spending on ads."
+    },
+    {
+      icon: "/calender1.png",
+      title: "Bookings That Just Work",
+      text: "24/7 bookings on a calendar that prevents double-booking and gives you full control over slots, pricing and availability across every court you run."
+    },
+    {
+      icon: "/Setting.png",
+      title: "Secured Transparent Payments",
+      text: "Money flows in cleanly, with statements your accountant can read. See exactly where revenue is coming from, slot by slot."
+    },
+    {
+      icon: "/Bulb.png",
+      title: "Dedicated Partner Support",
+      text: "Real partner support on the other end of the line. We help you set up, get listed and clear blockers fast, because nobody's growing while waiting on a support ticket."
+    }
+  ];
+
   return (
     <div id="venue-partners" className="bg-[#0F0F0F] text-white w-full overflow-hidden">
       {/* Standard CSS injection for keyframes and scroll optimization */}
@@ -187,27 +213,17 @@ export default function VenuePartnersv() {
           </p>
         </AnimateOnScroll>
 
-        <AnimateOnScroll direction="right" className="mx-auto max-w-6xl mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-          <FeatureCard
-            icon="/eye.png"
-            title="Get Discovered Faster"
-            text="Reach every player searching for a venue in your area, without depending on Instagram, word of mouth or hoping someone tags you in a story."
-          />
-          <FeatureCard
-            icon="/calender1.png"
-            title="Bookings without the back-and-forth"
-            text="24/7 bookings on a calendar that prevents double-booking and gives you full control over slots, pricing and availability across every court you run."
-          />
-          <FeatureCard
-            icon="/Setting.png"
-            title="Payments that don't go missing"
-            text="Money flows in cleanly, with statements your accountant can read. See exactly where revenue is coming from, slot by slot."
-          />
-          <FeatureCard
-            icon="/Bulb.png"
-            title="A real human, not a ticket queue"
-            text="Real partner support on the other end of the line. We help you set up, get listed and clear blockers fast, because nobody's growing while waiting on a support ticket."
-          />
+        <AnimateOnScroll direction="right" className="mx-auto max-w-[1350px] mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          {features.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              icon={feature.icon}
+              title={feature.title}
+              text={feature.text}
+              isActive={activeFeature === index}
+              onMouseEnter={() => setActiveFeature(index)}
+            />
+          ))}
         </AnimateOnScroll>
       </section>
 
@@ -483,18 +499,48 @@ function GooglePlayIcon() {
   );
 }
 
-function FeatureCard({ icon, title, text }: { icon: string; title: string; text: string }) {
+function FeatureCard({
+  icon,
+  title,
+  text,
+  isActive,
+  onMouseEnter,
+}: {
+  icon: string;
+  title: string;
+  text: string;
+  isActive: boolean;
+  onMouseEnter: () => void;
+}) {
   return (
-    <div className="relative flex h-full flex-col justify-start gap-8 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] text-left">
-      <img src={icon} alt="" className="h-16 w-16 shrink-0 object-contain" />
+    <div
+      onMouseEnter={onMouseEnter}
+      className={`relative flex h-[385px] flex-col justify-start rounded-[20px] border ${
+        isActive ? "border-[#c8f31d]" : "border-[#1D1D1D]"
+      } bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] text-left transition-all duration-300 overflow-hidden cursor-pointer`}
+    >
+      <img src={icon} alt="" className="h-[72px] w-[72px] shrink-0 object-contain" />
       <div className="absolute top-5 right-0 pointer-events-none">
-        <img src="/players/Union.png" alt="" className="w-19 h-19 object-contain" />
+        <img src="/venuepartners/Union.png" alt="" className="w-19 h-19 object-contain" />
       </div>
-      <div className="flex flex-col flex-1">
-        <h3 className="text-lg font-semibold text-white min-h-[56px]">{title}</h3>
-        <p className="mt-2 text-sm text-white/60 leading-relaxed">
-          {text}
-        </p>
+
+      <div className={`flex flex-col transition-all duration-300 ${isActive ? "mt-2" : "mt-16"}`}>
+        <h3 className={`font-normal leading-[1.2] tracking-tight text-[#c8f31d] transition-all duration-300 ${isActive ? "text-[28px]" : "text-[34px]"}`}>
+          {title}
+        </h3>
+
+        <div
+          className={`grid transition-all duration-300 ease-in-out ${
+            isActive ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0 mt-0"
+          }`}
+        >
+          <div className="overflow-hidden">
+            <div className="h-px w-full bg-[#c8f31d]/40 mb-4" />
+            <p className="text-[18px] text-white/90 leading-[1.6] tracking-wide">
+              {text}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
