@@ -73,6 +73,30 @@ const CARDS_DATA = [
 
 export default function Players() {
   const [openCardIndex, setOpenCardIndex] = useState<number | null>(null);
+  const [activeFeature, setActiveFeature] = useState(0);
+
+  const features = [
+    {
+      icon: "/eye.png",
+      title: "Verified venues only",
+      text: "Every venue on ACTIV is reviewed by our team before it goes live. Real photos, real reviews, real availability."
+    },
+    {
+      icon: "/calender1.png",
+      title: "Live slots, real prices",
+      text: "The slot you see is the slot you book. No surge pricing, no \"let me check,\" no arriving to find it taken."
+    },
+    {
+      icon: "/Setting.png",
+      title: "Easy booking",
+      text: "Pick, pay, confirmed. The booking lands in your inbox before you've finished deciding what to wear."
+    },
+    {
+      icon: "/Bulb.png",
+      title: "Sport and wellness, one app",
+      text: "Badminton on Saturday, yoga on Tuesday, the gym in between. All of it in one place, so your week doesn't live in seven."
+    }
+  ];
 
   const cloudinaryCloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
   const videoSrc = cloudinaryCloudName
@@ -208,58 +232,17 @@ export default function Players() {
           </p>
         </AnimateOnScroll>
 
-        <AnimateOnScroll direction="right" className="relative mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
-          <div className="relative flex h-full flex-col justify-start gap-8 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-            <img src="/eye.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-            <div className="absolute top-5 right-0 pointer-events-none">
-              <img src="/players/Union.png" alt="" className="w-19 h-19 object-contain" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-white">Verified venues only</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">
-                Every venue on ACTIV is reviewed by our team before it goes live. Real photos, real reviews, real availability.
-              </p>
-            </div>
-          </div>
-
-          <div className="relative flex h-full flex-col justify-start gap-8 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-            <img src="/calender1.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-            <div className="absolute top-5 right-0 pointer-events-none">
-              <img src="/players/Union.png" alt="" className="w-19 h-19 object-contain" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-white">Live slots, real prices</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">
-                The slot you see is the slot you book. No surge pricing, no "let me check," no arriving to find it taken.
-              </p>
-            </div>
-          </div>
-
-          <div className="relative flex h-full flex-col justify-start gap-8 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-            <img src="/Setting.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-            <div className="absolute top-5 right-0 pointer-events-none">
-              <img src="/players/Union.png" alt="" className="w-19 h-19 object-contain" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-white">Easy booking</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">
-                Pick, pay, confirmed. The booking lands in your inbox before you've finished deciding what to wear.
-              </p>
-            </div>
-          </div>
-
-          <div className="relative flex h-full flex-col justify-start gap-8 rounded-[24px] border border-[#1D1D1D] bg-black p-5 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)]">
-            <img src="/Bulb.png" alt="" className="h-16 w-16 shrink-0 object-contain" />
-            <div className="absolute top-5 right-0 pointer-events-none">
-              <img src="/players/Union.png" alt="" className="w-19 h-19 object-contain" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-white">Sport and wellness, one app</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">
-                Badminton on Saturday, yoga on Tuesday, the gym in between. All of it in one place, so your week doesn't live in seven.
-              </p>
-            </div>
-          </div>
+        <AnimateOnScroll direction="right" className="relative mx-auto mt-14 grid max-w-[1350px] grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
+          {features.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              icon={feature.icon}
+              title={feature.title}
+              text={feature.text}
+              isActive={activeFeature === index}
+              onMouseEnter={() => setActiveFeature(index)}
+            />
+          ))}
         </AnimateOnScroll>
       </section>
 
@@ -592,5 +575,52 @@ function GooglePlayIcon() {
       <circle cx="4" cy="15" r="1.2" />
       <circle cx="7" cy="15" r="1.2" />
     </svg>
+  );
+}
+
+function FeatureCard({
+  icon,
+  title,
+  text,
+  isActive,
+  onMouseEnter,
+}: {
+  icon: string;
+  title: string;
+  text: string;
+  isActive: boolean;
+  onMouseEnter: () => void;
+}) {
+  return (
+    <div
+      onMouseEnter={onMouseEnter}
+      className={`relative flex h-[360px] flex-col justify-start rounded-[20px] border ${
+        isActive ? "border-[#c8f31d]" : "border-[#1D1D1D]"
+      } bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] text-left transition-all duration-300 overflow-hidden cursor-pointer`}
+    >
+      <img src={icon} alt="" className="h-[72px] w-[72px] shrink-0 object-contain" />
+      <div className="absolute top-5 right-0 pointer-events-none">
+        <img src="/players/Union.png" alt="" className="w-19 h-19 object-contain" />
+      </div>
+
+      <div className={`flex flex-col transition-all duration-300 ${isActive ? "mt-2" : "mt-16"}`}>
+        <h3 className={`font-normal leading-[1.2] tracking-tight text-[#c8f31d] transition-all duration-300 ${isActive ? "text-[28px]" : "text-[34px]"}`}>
+          {title}
+        </h3>
+
+        <div
+          className={`grid transition-all duration-300 ease-in-out ${
+            isActive ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0 mt-0"
+          }`}
+        >
+          <div className="overflow-hidden">
+            <div className="h-px w-full bg-[#c8f31d]/40 mb-4" />
+            <p className="text-[18px] text-white/90 leading-[1.6] tracking-wide">
+              {text}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
