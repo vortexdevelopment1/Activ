@@ -253,7 +253,7 @@ export default function Players() {
         <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto_1fr] z-10">
           <AnimateOnScroll direction="left">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c8f31d]/30 bg-[#c8f31d]/10 px-3.5 py-1 backdrop-blur-sm">
-              <span className="text-[16px] font-semibold uppercase tracking-wider text-[#c8f31d]">
+              <span className="text-[16px] font-medium text-[#c8f31d]">
                 How It Works
               </span>
             </div>
