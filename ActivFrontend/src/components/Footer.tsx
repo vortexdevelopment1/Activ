@@ -63,7 +63,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               healthier communities together.
             </p>
 
-            <div className="mt-5 flex flex-wrap xl:ml-[-5px]">
+            <div className="mt-5 flex flex-wrap gap-2 xl:ml-[-5px]">
               <a
                 href="https://play.google.com/store/apps/details?id=com.activ.partnerapp"
                 target="_blank"

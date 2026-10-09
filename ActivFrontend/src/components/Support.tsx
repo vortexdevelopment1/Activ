@@ -304,7 +304,7 @@ export default function Support() {
                   placeholder="Full name"
                   required
                   value={formData.fullName}
-                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value.replace(/[0-9]/g, "") })}
                   className="w-full rounded-md border border-white/5 bg-[#181916] px-4 py-3 text-sm text-white placeholder-white/40 focus:border-[#c8f31d] focus:outline-none"
                 />
                 <input
@@ -321,7 +321,7 @@ export default function Support() {
                   type="tel"
                   placeholder="Phone number"
                   value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value.replace(/[^0-9+\-()\s]/g, "") })}
                   className="w-full rounded-md border border-white/5 bg-[#181916] px-4 py-3 text-sm text-white placeholder-white/40 focus:border-[#c8f31d] focus:outline-none"
                 />
               </div>
