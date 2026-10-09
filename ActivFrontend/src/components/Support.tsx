@@ -320,6 +320,7 @@ export default function Support() {
                 <input
                   type="tel"
                   placeholder="Phone number"
+                  maxLength={10}
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value.replace(/[^0-9+\-()\s]/g, "") })}
                   className="w-full rounded-md border border-white/5 bg-[#181916] px-4 py-3 text-sm text-white placeholder-white/40 focus:border-[#c8f31d] focus:outline-none"
