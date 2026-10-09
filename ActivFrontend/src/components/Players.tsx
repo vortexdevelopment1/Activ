@@ -253,7 +253,7 @@ export default function Players() {
         <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto_1fr] z-10">
           <AnimateOnScroll direction="left">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c8f31d]/30 bg-[#c8f31d]/10 px-3.5 py-1 backdrop-blur-sm">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#c8f31d]">
+              <span className="text-[16px] font-semibold uppercase tracking-wider text-[#c8f31d]">
                 How It Works
               </span>
             </div>
@@ -261,7 +261,7 @@ export default function Players() {
               From "I should" <br />
               to <span className="text-[#c8f31d]">"I'm there"</span>
             </h2>
-            <p className="mt-6 text-base text-white/60 leading-relaxed sm:text-lg w-full max-w-[490px]">
+            <p className="mt-6 text-[24px] text-white/60 leading-relaxed sm:text-lg w-full max-w-[490px]">
               Start with what you want to do. Choose the activity that fits your mood, your schedule, or your energy. From football and badminton to gyms, wellness and more — ACTIV helps you find it.
             </p>
           </AnimateOnScroll>
@@ -475,7 +475,7 @@ export default function Players() {
                       </svg>
                     </div>
                     {isOpen && (
-                      <p className="pb-2 pr-4 text-[15px] text-white/50 leading-relaxed">{card.desc}</p>
+                      <p className="pb-2 pr-4 text-[18px] text-white/50 leading-relaxed">{card.desc}</p>
                     )}
                   </div>
                 </div>
@@ -594,9 +594,8 @@ function FeatureCard({
   return (
     <div
       onMouseEnter={onMouseEnter}
-      className={`relative flex h-[360px] flex-col justify-start rounded-[20px] border ${
-        isActive ? "border-[#c8f31d]" : "border-[#1D1D1D]"
-      } bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] text-left transition-all duration-300 overflow-hidden cursor-pointer`}
+      className={`relative flex h-[360px] flex-col justify-start rounded-[20px] border-[0.5px] ${isActive ? "border-[#c8f31d]/50" : "border-[#1D1D1D]"
+        } bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] text-left transition-all duration-300 overflow-hidden cursor-pointer`}
     >
       <img src={icon} alt="" className="h-[72px] w-[72px] shrink-0 object-contain" />
       <div className="absolute top-5 right-0 pointer-events-none">
@@ -604,17 +603,16 @@ function FeatureCard({
       </div>
 
       <div className={`flex flex-col transition-all duration-300 ${isActive ? "mt-2" : "mt-16"}`}>
-        <h3 className={`font-normal leading-[1.2] tracking-tight text-[#c8f31d] transition-all duration-300 ${isActive ? "text-[28px]" : "text-[34px]"}`}>
+        <h3 className={`font-normal leading-[1.2] tracking-tight text-[#c8f31d]/90 transition-all duration-300 ${isActive ? "text-[28px]" : "text-[34px]"}`}>
           {title}
         </h3>
 
         <div
-          className={`grid transition-all duration-300 ease-in-out ${
-            isActive ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0 mt-0"
-          }`}
+          className={`grid transition-all duration-300 ease-in-out ${isActive ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0 mt-0"
+            }`}
         >
           <div className="overflow-hidden">
-            <div className="h-px w-full bg-[#c8f31d]/40 mb-4" />
+            <div className="h-px w-full bg-[#c8f31d]/20 mb-4" />
             <p className="text-[18px] text-white/90 leading-[1.6] tracking-wide">
               {text}
             </p>

@@ -515,9 +515,8 @@ function FeatureCard({
   return (
     <div
       onMouseEnter={onMouseEnter}
-      className={`relative flex h-[385px] flex-col justify-start rounded-[20px] border ${
-        isActive ? "border-[#c8f31d]" : "border-[#1D1D1D]"
-      } bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] text-left transition-all duration-300 overflow-hidden cursor-pointer`}
+      className={`relative flex h-[385px] flex-col justify-start rounded-[20px] border-[0.5px] ${isActive ? "border-[#c8f31d]/50" : "border-[#1D1D1D]"
+        } bg-black p-6 backdrop-blur-sm shadow-[0px_2px_8px_2px_rgba(122,122,122,0.14)] text-left transition-all duration-300 overflow-hidden cursor-pointer`}
     >
       <img src={icon} alt="" className="h-[72px] w-[72px] shrink-0 object-contain" />
       <div className="absolute top-5 right-0 pointer-events-none">
@@ -525,17 +524,16 @@ function FeatureCard({
       </div>
 
       <div className={`flex flex-col transition-all duration-300 ${isActive ? "mt-2" : "mt-16"}`}>
-        <h3 className={`font-normal leading-[1.2] tracking-tight text-[#c8f31d] transition-all duration-300 ${isActive ? "text-[28px]" : "text-[34px]"}`}>
+        <h3 className={`font-normal leading-[1.2] tracking-tight text-[#c8f31d]/90 transition-all duration-300 ${isActive ? "text-[28px]" : "text-[34px]"}`}>
           {title}
         </h3>
 
         <div
-          className={`grid transition-all duration-300 ease-in-out ${
-            isActive ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0 mt-0"
-          }`}
+          className={`grid transition-all duration-300 ease-in-out ${isActive ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0 mt-0"
+            }`}
         >
           <div className="overflow-hidden">
-            <div className="h-px w-full bg-[#c8f31d]/40 mb-4" />
+            <div className="h-px w-full bg-[#c8f31d]/20 mb-4" />
             <p className="text-[18px] text-white/90 leading-[1.6] tracking-wide">
               {text}
             </p>
